@@ -4,6 +4,9 @@ import subprocess
 import tempfile
 import shutil
 import time
+from datetime import date
+
+script_ran_independently = False
 
 def check_executable_exists(executable):
     from shutil import which
@@ -11,12 +14,13 @@ def check_executable_exists(executable):
         print(f"Error: {executable} is not available. Please install it and ensure it's in your PATH.")
         sys.exit(1)
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python script.py <GitHub_Repo_URL>")
+def main(args):
+    if script_ran_independently and len(sys.argv) < 2:
+        print("Usage: python RefactoringRunner.py <GitHub_Repo_URL>")
         sys.exit(1)
-    
-    github_repo_url = sys.argv[1]
+
+    github_repo_url = sys.argv[1] if script_ran_independently else args
+    github_repo_name = github_repo_url.split('/')[-1]
     refactoringminer_path = os.path.dirname(os.path.realpath(__file__)) + '/RefactoringMiner-3.0.8/bin/RefactoringMiner'
     
     # Check if git is available
@@ -39,7 +43,7 @@ def main():
         subprocess.check_call(['git', 'clone', github_repo_url, temp_dir])
         
         print("Running RefactoringMiner...")
-        subprocess.check_call([refactoringminer_path, '-a', temp_dir], shell=True)
+        subprocess.check_call([refactoringminer_path, '-a', temp_dir, '-json', f'RefactoringMinerOutputs/{github_repo_name}_{date.today()}.json'], shell=True)
     except subprocess.CalledProcessError as e:
         print(f"An error occurred: {e}")
     finally:
@@ -68,4 +72,5 @@ def onerror(func, path, exc_info):
         raise
 
 if __name__ == '__main__':
-    main()
+    script_ran_independently = True
+    main(sys.argv[1:])
