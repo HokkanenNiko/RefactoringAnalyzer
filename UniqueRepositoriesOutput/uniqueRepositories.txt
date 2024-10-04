@@ -368,3 +368,14 @@ https://github.com/apache/incubator-seatunnel
 https://github.com/apache/incubator-tamaya-sandbox
 https://github.com/apache/servicecomb-toolkit
 https://github.com/apache/servicecomb-pack
+https://github.com/apache/jspwiki
+https://github.com/apache/poi
+https://github.com/apache/pdfbox-jbig2
+https://github.com/apache/dolphinscheduler
+https://github.com/apache/ratis
+https://github.com/apache/daffodil
+https://github.com/apache/incubator-nemo
+https://github.com/apache/roller
+https://github.com/apache/knox
+https://github.com/apache/ant
+https://github.com/apache/logging-log4cxx

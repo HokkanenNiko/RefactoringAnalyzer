@@ -1,10 +1,3 @@
-https://github.com/apache/sling-org-apache-sling-graphql-core
-https://github.com/apache/sling-org-apache-sling-settings
-https://github.com/apache/sling-org-apache-sling-scripting-jsp-jstl
-https://github.com/apache/org.apache.nemo:nemo-project
-https://github.com/apache/any23
-https://github.com/apache/sling-org-apache-sling-jcr-contentloader
-https://github.com/apache/sling-org-apache-sling-scripting-jsp-taglib
 https://github.com/apache/sling-launchpad-standalone-archetype
 https://github.com/apache/sling-feature-launcher-maven-plugin
 https://github.com/apache/sling-org-apache-sling-scripting-jsp-taglib-compat
@@ -72,3 +65,12 @@ https://github.com/apache/sling-org-apache-sling-mongodb
 https://github.com/apache/sling-org-apache-sling-jmx-provider
 https://github.com/apache/sling-org-apache-sling-jcr-contentparser
 https://github.com/apache/sling-org-apache-sling-launchpad-test-services
+https://github.com/apache/sling-org-apache-sling-hc-samples
+https://github.com/apache/sling-org-apache-sling-installer-factory-deploymentpackage
+https://github.com/apache/sling-jcrinstall-bundle-archetype
+https://github.com/apache/sling-org-apache-sling-fragment-activation
+https://github.com/apache/sling-org-apache-sling-jcr-davex
+https://github.com/apache/sling-org-apache-sling-distribution-avro-serializer
+https://github.com/apache/sling-org-apache-sling-commons-fsclassloader
+https://github.com/apache/sling-org-apache-sling-installer-hc
+https://github.com/apache/sling-org-apache-sling-bnd-models

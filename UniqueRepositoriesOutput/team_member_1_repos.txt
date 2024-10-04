@@ -72,3 +72,6 @@ https://github.com/apache/sling-org-apache-sling-rewriter
 https://github.com/apache/ofbiz-plugins
 https://github.com/apache/groovy
 https://github.com/apache/sling-feature-converter-maven-plugin
+https://github.com/apache/sling-org-apache-sling-scripting-javascript
+https://github.com/apache/sling-org-apache-sling-installer-provider-file
+https://github.com/apache/sling-org-apache-sling-testing-clients

@@ -17,6 +17,21 @@ base_url = "https://github.com/apache/"
 
 output = ''
 
+# Add the missing links manually
+missing_links = [
+    "https://github.com/apache/jspwiki",
+    "https://github.com/apache/poi",
+    "https://github.com/apache/pdfbox-jbig2",
+    "https://github.com/apache/dolphinscheduler",
+    "https://github.com/apache/ratis",
+    "https://github.com/apache/daffodil",
+    "https://github.com/apache/incubator-nemo",
+    "https://github.com/apache/roller",
+    "https://github.com/apache/knox",
+    "https://github.com/apache/ant",
+    "https://github.com/apache/logging-log4cxx"
+]
+
 # Print each project as a link
 for project in unique_projects:
     
@@ -32,6 +47,12 @@ for project in unique_projects:
     output += f'{link}\n'
     print(link)
 
+# Append the missing links to the output
+for link in missing_links:
+    output += f'{link}\n'
+    print(link)
+
+# Save output to a text file
 outputPath = "UniqueRepositoriesOutput/uniqueRepositories.txt"
 f = open(outputPath, "w")
 f.write(output)

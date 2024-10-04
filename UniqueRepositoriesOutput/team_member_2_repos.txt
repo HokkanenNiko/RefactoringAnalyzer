@@ -1,6 +1,3 @@
-https://github.com/apache/sling-org-apache-sling-scripting-javascript
-https://github.com/apache/sling-org-apache-sling-installer-provider-file
-https://github.com/apache/sling-org-apache-sling-testing-clients
 https://github.com/apache/sling-org-apache-sling-nosql-launchpad
 https://github.com/apache/sling-org-apache-sling-feature
 https://github.com/apache/incubator-iotdb
@@ -72,3 +69,8 @@ https://github.com/apache/sling-org-apache-sling-commons-osgi
 https://github.com/apache/apache-ratis
 https://github.com/apache/sling-org-apache-sling-scripting-sightly-runtime
 https://github.com/apache/sling-org-apache-sling-feature-resolver
+https://github.com/apache/sling-org-apache-sling-jcr-maintenance
+https://github.com/apache/sling-org-apache-sling-distribution-api
+https://github.com/apache/sling-org-apache-sling-scripting-sightly-js-provider
+https://github.com/apache/sling-org-apache-sling-scripting-core
+https://github.com/apache/sling-org-apache-sling-jcr-jackrabbit-usermanager

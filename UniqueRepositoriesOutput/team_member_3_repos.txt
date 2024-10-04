@@ -1,8 +1,3 @@
-https://github.com/apache/sling-org-apache-sling-jcr-maintenance
-https://github.com/apache/sling-org-apache-sling-distribution-api
-https://github.com/apache/sling-org-apache-sling-scripting-sightly-js-provider
-https://github.com/apache/sling-org-apache-sling-scripting-core
-https://github.com/apache/sling-org-apache-sling-jcr-jackrabbit-usermanager
 https://github.com/apache/sling-org-apache-sling-installer-provider-jcr
 https://github.com/apache/sling-org-apache-sling-commons-content-analyzing
 https://github.com/apache/sling-org-apache-sling-auth-form
@@ -72,3 +67,10 @@ https://github.com/apache/sling-org-apache-sling-commons-clam
 https://github.com/apache/sling-org-apache-sling-nosql-couchbase-client
 https://github.com/apache/sling-org-apache-sling-models-jacksonexporter
 https://github.com/apache/jackrabbit-filevault-package-maven-plugin
+https://github.com/apache/sling-org-apache-sling-graphql-core
+https://github.com/apache/sling-org-apache-sling-settings
+https://github.com/apache/sling-org-apache-sling-scripting-jsp-jstl
+https://github.com/apache/org.apache.nemo:nemo-project
+https://github.com/apache/any23
+https://github.com/apache/sling-org-apache-sling-jcr-contentloader
+https://github.com/apache/sling-org-apache-sling-scripting-jsp-taglib
