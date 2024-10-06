@@ -1,0 +1,1922 @@
+[
+    {
+        "TotalSize": 6352355
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "jspwiki-builder",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "poi-parent",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "pdfbox-reactor",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "apache-dolphinscheduler",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "apache-ratis",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "apache-daffodil",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "org.apache.nemo:nemo-project",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "roller-master",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "knox-gateway",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "ant-master",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "milagro",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "log4cxx",
+        "size": -1,
+        "Result": "Fail"
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fragment-nashorn",
+        "size": 13
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-extensions-logback-groovy-fragment",
+        "size": 15
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-bnd-plugins",
+        "size": 15
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-apache-sling-jar-resource-bundle",
+        "size": 17
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-crankstart-test-model",
+        "size": 17
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-bnd-plugin-headers-parameters-remove",
+        "size": 17
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-jsp-api",
+        "size": 18
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-cache-container-test",
+        "size": 19
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-jcr-wrapper",
+        "size": 19
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-taglib-archetype",
+        "size": 19
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-startupfilter-disabler",
+        "size": 20
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-jsp-jstl",
+        "size": 20
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-el-api",
+        "size": 22
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-r2f",
+        "size": 22
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-cache-impl",
+        "size": 22
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-nosql-launchpad",
+        "size": 23
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-cache-api",
+        "size": 23
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-jsp-taglib-compat",
+        "size": 23
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jobs-it-services",
+        "size": 23
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-repository-it-resource-versioning",
+        "size": 23
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-contentparser-testutils",
+        "size": 24
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-startupmanager",
+        "size": 25
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-logging-mock",
+        "size": 25
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-kryo-serializer",
+        "size": 25
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-adapter-annotations",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fragment-ws",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-threaddump",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fragment-activation",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-tail",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fragment-transaction",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-crankstart-test-services",
+        "size": 26
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-karaf",
+        "size": 27
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-extensions-classloader-leak-detector",
+        "size": 27
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-test-fragment",
+        "size": 28
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-email",
+        "size": 28
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-xing-api",
+        "size": 28
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-filetransfer",
+        "size": 29
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-jackrabbit-base",
+        "size": 29
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-avro-serializer",
+        "size": 29
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-subsystems",
+        "size": 29
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-urlrewriter",
+        "size": 30
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-launchpad-webapp-archetype",
+        "size": 30
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-model",
+        "size": 31
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-oak-restrictions",
+        "size": 31
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fragment-xml",
+        "size": 31
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-apiregions-model",
+        "size": 32
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-contentparser-xml",
+        "size": 32
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-slingstart-archetype",
+        "size": 32
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-launchpad-standalone-archetype",
+        "size": 32
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-content-package-archetype",
+        "size": 33
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-performance",
+        "size": 33
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-contentparser-api",
+        "size": 33
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-xing-oauth",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-nosql-couchbase-client",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hapi-samplecontent",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-deploymentpackage",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-bnd-models",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-mom",
+        "size": 34
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-caconfig-bnd-plugin",
+        "size": 35
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-xing-login",
+        "size": 35
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-capabilities-jcr",
+        "size": 36
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-archetype-parent",
+        "size": 36
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-launchpad-debian",
+        "size": 36
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jobs-it",
+        "size": 36
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hc-junit-bridge",
+        "size": 36
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-contentparser-xml-jcr",
+        "size": 37
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-validation-examples",
+        "size": 38
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-api",
+        "size": 38
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-maintenance",
+        "size": 39
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-standalone",
+        "size": 39
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-initial-content-archetype",
+        "size": 40
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-inventoryprinter",
+        "size": 40
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-caconfig-integration-tests",
+        "size": 40
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-launchpad-comparator",
+        "size": 40
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-serviceuser-webconsole",
+        "size": 40
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-nosql-mongodb-resourceprovider",
+        "size": 41
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-caconfig",
+        "size": 42
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-jcr-file",
+        "size": 42
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-jcrinstall-bundle-archetype",
+        "size": 43
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-test-services-war",
+        "size": 43
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-bundle-archetype",
+        "size": 43
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-startupfilter",
+        "size": 43
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-reqanalyzer",
+        "size": 44
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-diff",
+        "size": 44
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourceaccesssecurity-it",
+        "size": 45
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-extensions-slf4j-mdc",
+        "size": 45
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-repoinit-it",
+        "size": 46
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-annotations-it",
+        "size": 46
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-mongodb",
+        "size": 46
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hc-api",
+        "size": 46
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-paxexam-util",
+        "size": 46
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-metrics-rrd4j",
+        "size": 47
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-provider-installhook",
+        "size": 47
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resource-inventory",
+        "size": 47
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-packages",
+        "size": 49
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-resourcesecurity",
+        "size": 49
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-applicationbuilder",
+        "size": 51
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-hamcrest",
+        "size": 51
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-models-provider",
+        "size": 52
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-support",
+        "size": 53
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-servlet-archetype",
+        "size": 53
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-event-dea",
+        "size": 54
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-validation-test-services",
+        "size": 55
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jmx-provider",
+        "size": 55
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-content-processing",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-contentparser-json",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-nosql-couchbase-resourceprovider",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-content-analyzing",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-logservice",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-maven-jcrocm-plugin",
+        "size": 56
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-test-bundles",
+        "size": 57
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jms",
+        "size": 57
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-tooling-support-source",
+        "size": 57
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-spi",
+        "size": 58
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-resolver-api",
+        "size": 58
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-extensions-webconsolebranding",
+        "size": 59
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-javax-activation",
+        "size": 62
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-registration",
+        "size": 62
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-webconsole",
+        "size": 62
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-xproc",
+        "size": 62
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-api",
+        "size": 64
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-adapter-annotations",
+        "size": 67
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-datasource",
+        "size": 67
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hapi-client",
+        "size": 68
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourcecollection",
+        "size": 69
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-starter-startup",
+        "size": 69
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-messaging",
+        "size": 71
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-serversetup",
+        "size": 71
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-healthcheck",
+        "size": 71
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hc-it",
+        "size": 71
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-tooling-support-install",
+        "size": 72
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-scriptable",
+        "size": 72
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-validation-impl",
+        "size": 74
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-installer",
+        "size": 74
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-packageinit",
+        "size": 75
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-nosql-generic",
+        "size": 75
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-log-webconsole",
+        "size": 75
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-superimposing",
+        "size": 76
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-kickstart-maven-plugin",
+        "size": 77
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-remote",
+        "size": 78
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-console",
+        "size": 79
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jobs",
+        "size": 79
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-console",
+        "size": 79
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-capabilities",
+        "size": 80
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourceaccesssecurity",
+        "size": 81
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-extensions-webconsolesecurityprovider",
+        "size": 82
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-caconfig-api",
+        "size": 83
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-contentdetection",
+        "size": 83
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hc-samples",
+        "size": 83
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-resolver",
+        "size": 84
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-extension-unpack",
+        "size": 84
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-graphql-schema-aggregator",
+        "size": 85
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-featureflags",
+        "size": 85
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-journal-messages",
+        "size": 90
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-rules",
+        "size": 92
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourcebuilder",
+        "size": 92
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-annotations",
+        "size": 93
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-feature-launcher-maven-plugin",
+        "size": 93
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-extension-content",
+        "size": 94
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-feature-converter-maven-plugin",
+        "size": 95
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-runtime",
+        "size": 95
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-davex",
+        "size": 95
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hapi",
+        "size": 95
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-hc",
+        "size": 97
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-tenant",
+        "size": 97
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-jacksonexporter",
+        "size": 101
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-provider-file",
+        "size": 103
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-teleporter",
+        "size": 106
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-contentparser",
+        "size": 106
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-johnzon",
+        "size": 107
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-project-archetype",
+        "size": 108
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-caconfig-mock-plugin",
+        "size": 108
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-sample",
+        "size": 109
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-connection-timeout-agent",
+        "size": 110
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-validation-api",
+        "size": 110
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-hc-support",
+        "size": 112
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resource-presence",
+        "size": 112
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-htl-maven-plugin",
+        "size": 112
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-fsclassloader",
+        "size": 112
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-compiler",
+        "size": 115
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-caconfig-spi",
+        "size": 116
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resource-filter",
+        "size": 116
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-journal-it",
+        "size": 121
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-api",
+        "size": 122
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-journal-kafka",
+        "size": 128
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-tracer",
+        "size": 129
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-metrics",
+        "size": 141
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-karaf-configs",
+        "size": 142
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-api",
+        "size": 146
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-html",
+        "size": 150
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-api",
+        "size": 151
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-bundleresource-impl",
+        "size": 152
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-compiler-java",
+        "size": 155
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-integration-tests",
+        "size": 156
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlet-helpers",
+        "size": 163
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-security",
+        "size": 164
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-webdav",
+        "size": 166
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-osgi",
+        "size": 167
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-jspc-maven-plugin",
+        "size": 168
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-testing",
+        "size": 168
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-testing-content",
+        "size": 172
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-settings",
+        "size": 175
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-clam",
+        "size": 177
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-karaf-distribution",
+        "size": 180
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-subsystems-base",
+        "size": 183
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-bundle-tracker-it",
+        "size": 185
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-classloader",
+        "size": 186
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-js-provider",
+        "size": 189
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-serviceusermapper",
+        "size": 190
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-adapter",
+        "size": 191
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-classloader",
+        "size": 191
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-mime",
+        "size": 192
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-feature",
+        "size": 193
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-factory-configuration",
+        "size": 194
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-sitemap",
+        "size": 195
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-query",
+        "size": 197
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-bundle-tracker",
+        "size": 201
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-scriptingbundle-maven-plugin",
+        "size": 204
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-sling-mock-oak",
+        "size": 205
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-karaf-launchpad-oak-tar-integration-tests",
+        "size": 206
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-provisioning-model",
+        "size": 212
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-apiregions",
+        "size": 215
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-threads",
+        "size": 222
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-modelconverter",
+        "size": 223
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-api",
+        "size": 228
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-maven-launchpad-plugin",
+        "size": 228
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-base",
+        "size": 231
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-groovy",
+        "size": 233
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-freemarker",
+        "size": 235
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-repl",
+        "size": 237
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-io",
+        "size": 239
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-form",
+        "size": 243
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-crypto",
+        "size": 245
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourcemerger",
+        "size": 247
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-resourceresolver-mock",
+        "size": 257
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-it",
+        "size": 265
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-launcher",
+        "size": 270
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-oak-server",
+        "size": 271
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-jsp-taglib",
+        "size": 286
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-commons",
+        "size": 289
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-jcr-mock",
+        "size": 298
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-rewriter",
+        "size": 299
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-karaf-integration-tests",
+        "size": 301
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-test-services",
+        "size": 330
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-dynamic-include",
+        "size": 331
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-scheduler",
+        "size": 346
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-testing",
+        "size": 347
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-javascript",
+        "size": 348
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-clam",
+        "size": 350
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-validation-core",
+        "size": 352
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-junit-core",
+        "size": 353
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-slingstart-maven-plugin",
+        "size": 355
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-clients",
+        "size": 360
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-thymeleaf",
+        "size": 376
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-messaging-mail",
+        "size": 382
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-karaf-features",
+        "size": 387
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-repoinit-parser",
+        "size": 389
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-starter-content",
+        "size": 399
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-java",
+        "size": 401
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-oak",
+        "size": 409
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly-compiler",
+        "size": 416
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-provider-jcr",
+        "size": 418
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-fsresource",
+        "size": 421
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-i18n",
+        "size": 424
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-xss",
+        "size": 428
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-parent",
+        "size": 440
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-get",
+        "size": 449
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-base",
+        "size": 463
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-thumbnails",
+        "size": 464
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-paxexam",
+        "size": 485
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-maven-plugin",
+        "size": 489
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-jackrabbit-accessmanager",
+        "size": 491
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-graphql-core",
+        "size": 496
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resource-editor",
+        "size": 538
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-testing",
+        "size": 549
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-jackrabbit-usermanager",
+        "size": 553
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-committer-cli",
+        "size": 582
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-repoinit",
+        "size": 590
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-core",
+        "size": 593
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-extension-apiregions",
+        "size": 605
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-esx",
+        "size": 620
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-contentloader",
+        "size": 622
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-commons-log",
+        "size": 622
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-base",
+        "size": 673
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-discovery-impl",
+        "size": 695
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-analyser",
+        "size": 714
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-caconfig-impl",
+        "size": 727
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-models-impl",
+        "size": 762
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-post",
+        "size": 785
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-pipes",
+        "size": 788
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-it",
+        "size": 848
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-core",
+        "size": 863
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-osgi-mock",
+        "size": 884
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-launchpad-integration-tests",
+        "size": 916
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-installer-core",
+        "size": 1016
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-servlets-resolver",
+        "size": 1093
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-testing-sling-mock",
+        "size": 1104
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-jsp",
+        "size": 1166
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-api",
+        "size": 1268
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-slingfeature-maven-plugin",
+        "size": 1321
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "jackrabbit-filevault-package-maven-plugin",
+        "size": 1346
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-event-api",
+        "size": 1358
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-journal",
+        "size": 1437
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-scripting-sightly",
+        "size": 1440
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-js-nodetypes",
+        "size": 1500
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature",
+        "size": 1565
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-engine",
+        "size": 1613
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-resourceresolver",
+        "size": 1615
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-tamaya-sandbox",
+        "size": 1640
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "fineract-cn-group-finance",
+        "size": 1759
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-jcr-resource",
+        "size": 1782
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-starter",
+        "size": 1830
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-event",
+        "size": 1934
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-distribution-core",
+        "size": 2055
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "pdfbox-jbig2",
+        "size": 2197
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "servicecomb-toolkit",
+        "size": 2257
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-statistics",
+        "size": 4080
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-auth-saml2",
+        "size": 4432
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-file-optimization",
+        "size": 5031
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-milagro-MPC",
+        "size": 5204
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "jackrabbit-filevault",
+        "size": 6048
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-tamaya-extensions",
+        "size": 6796
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-geometry",
+        "size": 7612
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-tamaya",
+        "size": 7630
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-rng",
+        "size": 8981
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-app-cms",
+        "size": 9347
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-ratis",
+        "size": 11218
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "ratis",
+        "size": 11218
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "gora",
+        "size": 11944
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "logging-log4cxx",
+        "size": 13634
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "servicecomb-pack",
+        "size": 15517
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-feature-cpconverter",
+        "size": 20035
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "knox",
+        "size": 23406
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-math",
+        "size": 28799
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-math",
+        "size": 28799
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "shiro",
+        "size": 30144
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "submarine",
+        "size": 30721
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-numbers",
+        "size": 30885
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-seatunnel",
+        "size": 36990
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "any23",
+        "size": 40003
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "xmlbeans",
+        "size": 66440
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "karaf",
+        "size": 70597
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "commons-compress",
+        "size": 70711
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "ant",
+        "size": 75552
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "fineract",
+        "size": 79848
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-org-apache-sling-kickstart",
+        "size": 81149
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "struts",
+        "size": 83040
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "openmeetings",
+        "size": 84219
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "hadoop-ozone",
+        "size": 89369
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-whiteboard",
+        "size": 96495
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "jspwiki",
+        "size": 104242
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-nemo",
+        "size": 117375
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "JMeter",
+        "size": 133681
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "cxf",
+        "size": 138242
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "plc4x",
+        "size": 156124
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "ofbiz-plugins",
+        "size": 167933
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "sling-site",
+        "size": 169870
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-daffodil",
+        "size": 181445
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "daffodil",
+        "size": 181445
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-hop",
+        "size": 197812
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "hop",
+        "size": 197812
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "groovy",
+        "size": 214488
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "poi",
+        "size": 219630
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "dolphinscheduler",
+        "size": 247188
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "incubator-iotdb",
+        "size": 255943
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "roller",
+        "size": 301576
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "isis",
+        "size": 382208
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "ofbiz-framework",
+        "size": 744272
+    },
+    {
+        "RepositoryOwner": "apache",
+        "RepositoryName": "camel",
+        "size": 962040
+    }
+]
