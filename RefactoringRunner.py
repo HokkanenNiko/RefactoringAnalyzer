@@ -43,15 +43,20 @@ def main(args):
         subprocess.check_call(['git', 'clone', github_repo_url, temp_dir])
         
         print("Running RefactoringMiner...")
-        subprocess.check_call([refactoringminer_path, '-a', temp_dir, '-json', f'RefactoringMinerOutputs/{github_repo_name}_{date.today()}.json'], shell=True)
+        json_output_file = f'RefactoringMinerOutputs/{github_repo_name}_{date.today()}.json'
+        subprocess.check_call([refactoringminer_path, '-a', temp_dir, '-json', json_output_file], shell=True)
+        
+        # Return the paths to the cloned repo and the JSON file for later use
+        return temp_dir, json_output_file
+
     except subprocess.CalledProcessError as e:
         print(f"An error occurred: {e}")
-    finally:
-        # Remove the repository
-        print(f"Removing repository at {temp_dir}")
-        time.sleep(10)
-        shutil.rmtree(temp_dir, onerror=onerror)
+        return None, None
 
+    finally:
+        # Repo now removed on the Runner.py file
+        print(f"Repository cloned to {temp_dir} is available for further analysis.")
+        
 def onerror(func, path, exc_info):
     """
     Error handler for ``shutil.rmtree``.
@@ -73,4 +78,6 @@ def onerror(func, path, exc_info):
 
 if __name__ == '__main__':
     script_ran_independently = True
-    main(sys.argv[1:])
+    temp_dir, json_output = main(sys.argv[1:])
+    print(f"Cloned repository path: {temp_dir}")
+    print(f"RefactoringMiner JSON output: {json_output}")
