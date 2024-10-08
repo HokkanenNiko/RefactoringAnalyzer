@@ -7,19 +7,19 @@ loggers = {}
 
 def set_logger(operation_name, log_dir="Logs"):
     """
-    Sets up a logger for the module and returns it.
+    Sets up a logger for the operation and returns it.
     Creates a new logger if one doesn't exist.
     """
     # Create a directory for logs if not exists
     os.makedirs(log_dir, exist_ok=True)
 
     # Create a subdirectory for each operation's logs
-    module_log_dir = os.path.join(log_dir, f"{operation_name}Logs")
-    os.makedirs(module_log_dir, exist_ok=True)
+    operation_log_dir = os.path.join(log_dir, f"{operation_name}Logs")
+    os.makedirs(operation_log_dir, exist_ok=True)
 
     # Create timestamped log file
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    log_file = os.path.join(module_log_dir, f'{operation_name}_{timestamp}.log')
+    log_file = os.path.join(operation_log_dir, f'{operation_name}_{timestamp}.log')
 
     # Create and configure the logger
     logger = logging.getLogger(operation_name)
