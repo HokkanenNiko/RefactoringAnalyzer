@@ -1,25 +1,58 @@
-import subprocess
+import os
+import shutil
 import time
+
+import DeveloperEffort
 import RefactoringRunner
+from LoggerManager import get_logger
+
+# Loggers
+refactoring_runner_logger = get_logger("RefactoringRunner")
 
 number_of_repositories_to_analyse = 1
 
 repositoriesInfoFilePath = 'UniqueRepositoriesOutput/uniqueRepositories.txt'
-f = open(repositoriesInfoFilePath, "r")
-repos_string = f.read()
-f.close()
+with open(repositoriesInfoFilePath, "r") as f:
+    repos_string = f.read()
 
 repos_list = repos_string.splitlines()
 
 repositories_analysed = 0
 for repository in repos_list:
-    print(repository)
+    refactoring_runner_logger.info(repository)
     start = time.time()
-    RefactoringRunner.main(repository)
-    end = time.time()
-    print(f'ran: {repository} elapsed: {end - start}')
-    repositories_analysed += 1
-    if(repositories_analysed >= number_of_repositories_to_analyse):
+
+    try:
+        # Run RefactoringRunner and get paths
+        cloned_repo_path, refminer_output_path = RefactoringRunner.main(repository, refactoring_runner_logger)
+
+        end = time.time()
+        refactoring_runner_logger.info(f'ran: {repository} elapsed: {end - start:.2f}')
+        refactoring_runner_logger.info("RefactoringRunner finished")
+
+        repositories_analysed += 1
+
+        # If both the repo and refactoring output are available, run DeveloperEffort analysis
+        if cloned_repo_path and refminer_output_path:
+            refactoring_runner_logger.info("Proceeding to DeveloperEffort analysis...")
+
+            repo_name = repository.split('/')[-1]
+            output_csv_path = os.path.join('DeveloperEffortOutputs', f'developer_effort_{repo_name}.csv')
+
+            # Run DeveloperEffort
+            DeveloperEffort.collect_refactoring_developer_effort(cloned_repo_path, refminer_output_path, output_csv_path)
+
+            # Remove the cloned repository
+            refactoring_runner_logger.info(f"Deleting the cloned repository at {cloned_repo_path}...")
+            shutil.rmtree(cloned_repo_path, ignore_errors=True)
+            refactoring_runner_logger.info(f"Repository at {cloned_repo_path} deleted.")
+        else:
+            refactoring_runner_logger.error("Failed to clone the repository or generate RefactoringMiner output.")
+
+    except Exception as e:
+        refactoring_runner_logger.error(f"An error occurred while processing {repository}: {e}", exc_info=True)
+
+    if repositories_analysed >= number_of_repositories_to_analyse:
         break
 
-print("runner finished")
+refactoring_runner_logger.info(f"Runner finished. Total repositories analyzed: {repositories_analysed}")
