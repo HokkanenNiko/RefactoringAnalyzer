@@ -7,6 +7,7 @@ import RefactoringRunner
 from LoggerManager import get_logger
 from GetBugIssueData import main as issue_data
 from ProduceUniqueRepos import main as get_unique_repos
+from GetGitDiff import get_commit_diff
 
 def get_unique_repos_list():
     repositoriesInfoFilePath = get_unique_repos() # step a)
@@ -57,8 +58,9 @@ def main(user, token, single_repository):
                 repo_name = repository.split('/')[-1]
                 output_csv_path = os.path.join('DeveloperEffortOutputs', f'developer_effort_{repo_name}.csv')
 
-                DeveloperEffort.collect_refactoring_developer_effort(cloned_repo_path, refminer_output_path, output_csv_path) # step d)
-                issue_data(user, token, repository)                                                                           # step e)
+                get_commit_diff(cloned_repo_path, f'CommitDifferencesOutput/{repo_name}.json')                                # step d)                                                                   # step d)
+                DeveloperEffort.collect_refactoring_developer_effort(cloned_repo_path, refminer_output_path, output_csv_path) # step e)
+                issue_data(user, token, repository)                                                                           # step f)
 
                 # Remove the cloned repository
                 refactoring_runner_logger.info(f"Deleting the cloned repository at {cloned_repo_path}...")

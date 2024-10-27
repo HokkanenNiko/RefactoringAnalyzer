@@ -1,0 +1,3292 @@
+[
+    {
+        "commit_hash": "7179289cfce7392f09bdb7f61f9208fb64bb18a6",
+        "previous_commit_hash": "09e33ef939ce1428d97e73787e2f7f2362d5aa44",
+        "diff_stats": {
+            "insertions": 34,
+            "deletions": 55,
+            "files_modified": 2
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [],
+                "deleted_lines": [
+                    {
+                        "line_number": 52,
+                        "content": "        <dependency>"
+                    },
+                    {
+                        "line_number": 53,
+                        "content": "            <groupId>commons-io</groupId>"
+                    },
+                    {
+                        "line_number": 54,
+                        "content": "            <artifactId>commons-io</artifactId>"
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "            <version>2.6</version>"
+                    },
+                    {
+                        "line_number": 56,
+                        "content": "            <scope>provided</scope>"
+                    },
+                    {
+                        "line_number": 57,
+                        "content": "        </dependency>"
+                    },
+                    {
+                        "line_number": 69,
+                        "content": "        <dependency>"
+                    },
+                    {
+                        "line_number": 70,
+                        "content": "            <groupId>org.osgi</groupId>"
+                    },
+                    {
+                        "line_number": 71,
+                        "content": "            <artifactId>org.osgi.service.component</artifactId>"
+                    },
+                    {
+                        "line_number": 72,
+                        "content": "            <scope>provided</scope>"
+                    },
+                    {
+                        "line_number": 73,
+                        "content": "        </dependency>"
+                    },
+                    {
+                        "line_number": 74,
+                        "content": "        <dependency>"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "            <groupId>org.osgi</groupId>"
+                    },
+                    {
+                        "line_number": 76,
+                        "content": "            <artifactId>org.osgi.framework</artifactId>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <scope>provided</scope>"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "        </dependency>"
+                    },
+                    {
+                        "line_number": 79,
+                        "content": "        <dependency>"
+                    },
+                    {
+                        "line_number": 80,
+                        "content": "            <groupId>org.slf4j</groupId>"
+                    },
+                    {
+                        "line_number": 81,
+                        "content": "            <artifactId>slf4j-api</artifactId>"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "            <scope>provided</scope>"
+                    },
+                    {
+                        "line_number": 83,
+                        "content": "        </dependency>"
+                    },
+                    {
+                        "line_number": 95,
+                        "content": "        <dependency>"
+                    },
+                    {
+                        "line_number": 96,
+                        "content": "            <groupId>com.google.guava</groupId>"
+                    },
+                    {
+                        "line_number": 97,
+                        "content": "            <artifactId>guava</artifactId>"
+                    },
+                    {
+                        "line_number": 98,
+                        "content": "            <version>15.0</version>"
+                    },
+                    {
+                        "line_number": 99,
+                        "content": "            <scope>test</scope>"
+                    },
+                    {
+                        "line_number": 100,
+                        "content": "        </dependency>"
+                    }
+                ]
+            },
+            {
+                "filename": "XmlContentParserTest.java",
+                "added_lines": [
+                    {
+                        "line_number": 23,
+                        "content": "import java.util.Arrays;"
+                    },
+                    {
+                        "line_number": 25,
+                        "content": "import java.util.Collections;"
+                    },
+                    {
+                        "line_number": 26,
+                        "content": "import java.util.HashSet;"
+                    },
+                    {
+                        "line_number": 33,
+                        "content": "import org.apache.sling.contentparser.testutils.TestUtils;"
+                    },
+                    {
+                        "line_number": 56,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 63,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 64,
+                        "content": "        ContentElement child = content.getChild(\"toolbar/profiles/jcr:content\");"
+                    },
+                    {
+                        "line_number": 65,
+                        "content": "        assertNotNull(\"Expected child at path toolbar/profiles/jcr:content\", child);"
+                    },
+                    {
+                        "line_number": 66,
+                        "content": "        Map<String, Object> props = child.getProperties();"
+                    },
+                    {
+                        "line_number": 80,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 81,
+                        "content": "        ContentElement child = content.getChild(\"jcr:content/header\");"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "        assertNotNull(\"Expected child at jcr:content/header\", child);"
+                    },
+                    {
+                        "line_number": 83,
+                        "content": "        Map<String, Object> props = child.getProperties();"
+                    },
+                    {
+                        "line_number": 89,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, new ParserOptions().detectCalendarValues(true), file);"
+                    },
+                    {
+                        "line_number": 90,
+                        "content": "        ContentElement child = content.getChild(\"jcr:content\");"
+                    },
+                    {
+                        "line_number": 91,
+                        "content": "        assertNotNull(\"Expected child at jcr:content\", child);"
+                    },
+                    {
+                        "line_number": 92,
+                        "content": "        Map<String, Object> props = child.getProperties();"
+                    },
+                    {
+                        "line_number": 110,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 111,
+                        "content": "        ContentElement child = content.getChild(\"jcr:content\");"
+                    },
+                    {
+                        "line_number": 112,
+                        "content": "        assertNotNull(\"Expected child at jcr:content\", child);"
+                    },
+                    {
+                        "line_number": 113,
+                        "content": "        Map<String, Object> props = child.getProperties();"
+                    },
+                    {
+                        "line_number": 121,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 129,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 135,
+                        "content": "        ContentElement content = TestUtils.parse(underTest,"
+                    },
+                    {
+                        "line_number": 136,
+                        "content": "                new ParserOptions().ignoreResourceNames(Collections.unmodifiableSet(new HashSet<>(Arrays.asList(\"header\", \"newslist\"))))"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "                        .ignorePropertyNames(Collections.unmodifiableSet(new HashSet<>(Arrays.asList(\"jcr:title\")))), file);"
+                    },
+                    {
+                        "line_number": 139,
+                        "content": "        assertNotNull(\"Expected child at jcr:content\", child);"
+                    },
+                    {
+                        "line_number": 140,
+                        "content": "        Map<String, Object> props = child.getProperties();"
+                    },
+                    {
+                        "line_number": 142,
+                        "content": "        assertEquals(\"Sample Homepage\", props.get(\"pageTitle\"));"
+                    },
+                    {
+                        "line_number": 143,
+                        "content": "        assertEquals(\"abc\", props.get(\"refpro1\"));"
+                    },
+                    {
+                        "line_number": 144,
+                        "content": "        assertEquals(\"def\", props.get(\"pathprop1\"));"
+                    },
+                    {
+                        "line_number": 145,
+                        "content": "        assertNull(props.get(\"jcr:title\"));"
+                    },
+                    {
+                        "line_number": 155,
+                        "content": "        ContentElement content = TestUtils.parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 159,
+                        "content": "        assertNotNull(\"Expected a child at path jcr:content/par/image/file/jcr:content\", deepChild);"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 34,
+                        "content": "import com.google.common.collect.ImmutableSet;"
+                    },
+                    {
+                        "line_number": 35,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 36,
+                        "content": "import static org.apache.sling.contentparser.testutils.TestUtils.parse;"
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 62,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 63,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 64,
+                        "content": "        Map<String, Object> props = content.getChild(\"toolbar/profiles/jcr:content\").getProperties();"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 79,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 80,
+                        "content": "        Map<String, Object> props = content.getChild(\"jcr:content/header\").getProperties();"
+                    },
+                    {
+                        "line_number": 86,
+                        "content": "        ContentElement content = parse(underTest, new ParserOptions().detectCalendarValues(true), file);"
+                    },
+                    {
+                        "line_number": 87,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 88,
+                        "content": "        Map<String, Object> props = content.getChild(\"jcr:content\").getProperties();"
+                    },
+                    {
+                        "line_number": 106,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 107,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 108,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 109,
+                        "content": "        Map<String, Object> props = content.getChild(\"jcr:content\").getProperties();"
+                    },
+                    {
+                        "line_number": 110,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 118,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 126,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    },
+                    {
+                        "line_number": 132,
+                        "content": "        ContentElement content = parse(underTest,  new ParserOptions().ignoreResourceNames(ImmutableSet.of(\"header\", \"newslist\"))"
+                    },
+                    {
+                        "line_number": 133,
+                        "content": "                .ignorePropertyNames(ImmutableSet.of(\"jcr:title\")), file);"
+                    },
+                    {
+                        "line_number": 136,
+                        "content": "        assertEquals(\"Sample Homepage\", child.getProperties().get(\"pageTitle\"));"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "        assertNull(child.getProperties().get(\"jcr:title\"));"
+                    },
+                    {
+                        "line_number": 142,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 143,
+                        "content": "        assertEquals(\"abc\", child.getProperties().get(\"refpro1\"));"
+                    },
+                    {
+                        "line_number": 144,
+                        "content": "        assertEquals(\"def\", child.getProperties().get(\"pathprop1\"));"
+                    },
+                    {
+                        "line_number": 150,
+                        "content": "        ContentElement content = parse(underTest, file);"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "8f884c4070a7e7eb3eef50f999f2004b5e4c46b1",
+        "previous_commit_hash": "7179289cfce7392f09bdb7f61f9208fb64bb18a6",
+        "diff_stats": {
+            "insertions": 12,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 45,
+                        "content": "    <build>"
+                    },
+                    {
+                        "line_number": 46,
+                        "content": "        <plugins>"
+                    },
+                    {
+                        "line_number": 47,
+                        "content": "            <plugin>"
+                    },
+                    {
+                        "line_number": 48,
+                        "content": "                <groupId>biz.aQute.bnd</groupId>"
+                    },
+                    {
+                        "line_number": 49,
+                        "content": "                <artifactId>bnd-baseline-maven-plugin</artifactId>"
+                    },
+                    {
+                        "line_number": 50,
+                        "content": "                <configuration>"
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "                    <failOnMissing>false</failOnMissing>"
+                    },
+                    {
+                        "line_number": 52,
+                        "content": "                </configuration>"
+                    },
+                    {
+                        "line_number": 53,
+                        "content": "            </plugin>"
+                    },
+                    {
+                        "line_number": 54,
+                        "content": "        </plugins>"
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "    </build>"
+                    },
+                    {
+                        "line_number": 56,
+                        "content": ""
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "de2f2547fc065602a6ed21cfae6cff4ee317ff3a",
+        "previous_commit_hash": "8f884c4070a7e7eb3eef50f999f2004b5e4c46b1",
+        "diff_stats": {
+            "insertions": 279,
+            "deletions": 0,
+            "files_modified": 5
+        },
+        "diff_content": [
+            {
+                "filename": ".gitignore",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/target"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": ".idea"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": ".classpath"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": ".metadata"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": ".project"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": ".settings"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": ".externalToolBuilders"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "maven-eclipse.xml"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "*.swp"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": "*.iml"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "*.ipr"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "*.iws"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "*.bak"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": ".vlt"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": ".DS_Store"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": "jcr.log"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": "atlassian-ide-plugin.xml"
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "CODE_OF_CONDUCT.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "  ~ Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "  ~ or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "  ~ distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": "  ~ regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "  ~ to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": "  ~ \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "  ~ with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "  ~"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": "  ~   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "  ~"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "  ~ Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "  ~ software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": "  ~ \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": "  ~ KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": "  ~ specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": "  ~ under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->"
+                    },
+                    {
+                        "line_number": 19,
+                        "content": "Apache Software Foundation Code of Conduct"
+                    },
+                    {
+                        "line_number": 20,
+                        "content": "===="
+                    },
+                    {
+                        "line_number": 21,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 22,
+                        "content": "Being an Apache project, Apache Sling adheres to the Apache Software Foundation's [Code of Conduct](https://www.apache.org/foundation/policies/conduct.html)."
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "CONTRIBUTING.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "  ~ Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "  ~ or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "  ~ distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": "  ~ regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "  ~ to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": "  ~ \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "  ~ with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "  ~"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": "  ~   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "  ~"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "  ~ Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "  ~ software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": "  ~ \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": "  ~ KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": "  ~ specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": "  ~ under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->"
+                    },
+                    {
+                        "line_number": 19,
+                        "content": "Contributing"
+                    },
+                    {
+                        "line_number": 20,
+                        "content": "===="
+                    },
+                    {
+                        "line_number": 21,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 22,
+                        "content": "Thanks for choosing to contribute!"
+                    },
+                    {
+                        "line_number": 23,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 24,
+                        "content": "You will find all the necessary details about how you can do this at https://sling.apache.org/contributing.html."
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "LICENSE",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "                                 Apache License"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "                           Version 2.0, January 2004"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "                        http://www.apache.org/licenses/"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "   1. Definitions."
+                    },
+                    {
+                        "line_number": 9,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 10,
+                        "content": "      \"License\" shall mean the terms and conditions for use, reproduction,"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "      and distribution as defined by Sections 1 through 9 of this document."
+                    },
+                    {
+                        "line_number": 12,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "      \"Licensor\" shall mean the copyright owner or entity authorized by"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": "      the copyright owner that is granting the License."
+                    },
+                    {
+                        "line_number": 15,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 16,
+                        "content": "      \"Legal Entity\" shall mean the union of the acting entity and all"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": "      other entities that control, are controlled by, or are under common"
+                    },
+                    {
+                        "line_number": 18,
+                        "content": "      control with that entity. For the purposes of this definition,"
+                    },
+                    {
+                        "line_number": 19,
+                        "content": "      \"control\" means (i) the power, direct or indirect, to cause the"
+                    },
+                    {
+                        "line_number": 20,
+                        "content": "      direction or management of such entity, whether by contract or"
+                    },
+                    {
+                        "line_number": 21,
+                        "content": "      otherwise, or (ii) ownership of fifty percent (50%) or more of the"
+                    },
+                    {
+                        "line_number": 22,
+                        "content": "      outstanding shares, or (iii) beneficial ownership of such entity."
+                    },
+                    {
+                        "line_number": 23,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 24,
+                        "content": "      \"You\" (or \"Your\") shall mean an individual or Legal Entity"
+                    },
+                    {
+                        "line_number": 25,
+                        "content": "      exercising permissions granted by this License."
+                    },
+                    {
+                        "line_number": 26,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 27,
+                        "content": "      \"Source\" form shall mean the preferred form for making modifications,"
+                    },
+                    {
+                        "line_number": 28,
+                        "content": "      including but not limited to software source code, documentation"
+                    },
+                    {
+                        "line_number": 29,
+                        "content": "      source, and configuration files."
+                    },
+                    {
+                        "line_number": 30,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 31,
+                        "content": "      \"Object\" form shall mean any form resulting from mechanical"
+                    },
+                    {
+                        "line_number": 32,
+                        "content": "      transformation or translation of a Source form, including but"
+                    },
+                    {
+                        "line_number": 33,
+                        "content": "      not limited to compiled object code, generated documentation,"
+                    },
+                    {
+                        "line_number": 34,
+                        "content": "      and conversions to other media types."
+                    },
+                    {
+                        "line_number": 35,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 36,
+                        "content": "      \"Work\" shall mean the work of authorship, whether in Source or"
+                    },
+                    {
+                        "line_number": 37,
+                        "content": "      Object form, made available under the License, as indicated by a"
+                    },
+                    {
+                        "line_number": 38,
+                        "content": "      copyright notice that is included in or attached to the work"
+                    },
+                    {
+                        "line_number": 39,
+                        "content": "      (an example is provided in the Appendix below)."
+                    },
+                    {
+                        "line_number": 40,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 41,
+                        "content": "      \"Derivative Works\" shall mean any work, whether in Source or Object"
+                    },
+                    {
+                        "line_number": 42,
+                        "content": "      form, that is based on (or derived from) the Work and for which the"
+                    },
+                    {
+                        "line_number": 43,
+                        "content": "      editorial revisions, annotations, elaborations, or other modifications"
+                    },
+                    {
+                        "line_number": 44,
+                        "content": "      represent, as a whole, an original work of authorship. For the purposes"
+                    },
+                    {
+                        "line_number": 45,
+                        "content": "      of this License, Derivative Works shall not include works that remain"
+                    },
+                    {
+                        "line_number": 46,
+                        "content": "      separable from, or merely link (or bind by name) to the interfaces of,"
+                    },
+                    {
+                        "line_number": 47,
+                        "content": "      the Work and Derivative Works thereof."
+                    },
+                    {
+                        "line_number": 48,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 49,
+                        "content": "      \"Contribution\" shall mean any work of authorship, including"
+                    },
+                    {
+                        "line_number": 50,
+                        "content": "      the original version of the Work and any modifications or additions"
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "      to that Work or Derivative Works thereof, that is intentionally"
+                    },
+                    {
+                        "line_number": 52,
+                        "content": "      submitted to Licensor for inclusion in the Work by the copyright owner"
+                    },
+                    {
+                        "line_number": 53,
+                        "content": "      or by an individual or Legal Entity authorized to submit on behalf of"
+                    },
+                    {
+                        "line_number": 54,
+                        "content": "      the copyright owner. For the purposes of this definition, \"submitted\""
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "      means any form of electronic, verbal, or written communication sent"
+                    },
+                    {
+                        "line_number": 56,
+                        "content": "      to the Licensor or its representatives, including but not limited to"
+                    },
+                    {
+                        "line_number": 57,
+                        "content": "      communication on electronic mailing lists, source code control systems,"
+                    },
+                    {
+                        "line_number": 58,
+                        "content": "      and issue tracking systems that are managed by, or on behalf of, the"
+                    },
+                    {
+                        "line_number": 59,
+                        "content": "      Licensor for the purpose of discussing and improving the Work, but"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "      excluding communication that is conspicuously marked or otherwise"
+                    },
+                    {
+                        "line_number": 61,
+                        "content": "      designated in writing by the copyright owner as \"Not a Contribution.\""
+                    },
+                    {
+                        "line_number": 62,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 63,
+                        "content": "      \"Contributor\" shall mean Licensor and any individual or Legal Entity"
+                    },
+                    {
+                        "line_number": 64,
+                        "content": "      on behalf of whom a Contribution has been received by Licensor and"
+                    },
+                    {
+                        "line_number": 65,
+                        "content": "      subsequently incorporated within the Work."
+                    },
+                    {
+                        "line_number": 66,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 67,
+                        "content": "   2. Grant of Copyright License. Subject to the terms and conditions of"
+                    },
+                    {
+                        "line_number": 68,
+                        "content": "      this License, each Contributor hereby grants to You a perpetual,"
+                    },
+                    {
+                        "line_number": 69,
+                        "content": "      worldwide, non-exclusive, no-charge, royalty-free, irrevocable"
+                    },
+                    {
+                        "line_number": 70,
+                        "content": "      copyright license to reproduce, prepare Derivative Works of,"
+                    },
+                    {
+                        "line_number": 71,
+                        "content": "      publicly display, publicly perform, sublicense, and distribute the"
+                    },
+                    {
+                        "line_number": 72,
+                        "content": "      Work and such Derivative Works in Source or Object form."
+                    },
+                    {
+                        "line_number": 73,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 74,
+                        "content": "   3. Grant of Patent License. Subject to the terms and conditions of"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "      this License, each Contributor hereby grants to You a perpetual,"
+                    },
+                    {
+                        "line_number": 76,
+                        "content": "      worldwide, non-exclusive, no-charge, royalty-free, irrevocable"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "      (except as stated in this section) patent license to make, have made,"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "      use, offer to sell, sell, import, and otherwise transfer the Work,"
+                    },
+                    {
+                        "line_number": 79,
+                        "content": "      where such license applies only to those patent claims licensable"
+                    },
+                    {
+                        "line_number": 80,
+                        "content": "      by such Contributor that are necessarily infringed by their"
+                    },
+                    {
+                        "line_number": 81,
+                        "content": "      Contribution(s) alone or by combination of their Contribution(s)"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "      with the Work to which such Contribution(s) was submitted. If You"
+                    },
+                    {
+                        "line_number": 83,
+                        "content": "      institute patent litigation against any entity (including a"
+                    },
+                    {
+                        "line_number": 84,
+                        "content": "      cross-claim or counterclaim in a lawsuit) alleging that the Work"
+                    },
+                    {
+                        "line_number": 85,
+                        "content": "      or a Contribution incorporated within the Work constitutes direct"
+                    },
+                    {
+                        "line_number": 86,
+                        "content": "      or contributory patent infringement, then any patent licenses"
+                    },
+                    {
+                        "line_number": 87,
+                        "content": "      granted to You under this License for that Work shall terminate"
+                    },
+                    {
+                        "line_number": 88,
+                        "content": "      as of the date such litigation is filed."
+                    },
+                    {
+                        "line_number": 89,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 90,
+                        "content": "   4. Redistribution. You may reproduce and distribute copies of the"
+                    },
+                    {
+                        "line_number": 91,
+                        "content": "      Work or Derivative Works thereof in any medium, with or without"
+                    },
+                    {
+                        "line_number": 92,
+                        "content": "      modifications, and in Source or Object form, provided that You"
+                    },
+                    {
+                        "line_number": 93,
+                        "content": "      meet the following conditions:"
+                    },
+                    {
+                        "line_number": 94,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 95,
+                        "content": "      (a) You must give any other recipients of the Work or"
+                    },
+                    {
+                        "line_number": 96,
+                        "content": "          Derivative Works a copy of this License; and"
+                    },
+                    {
+                        "line_number": 97,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 98,
+                        "content": "      (b) You must cause any modified files to carry prominent notices"
+                    },
+                    {
+                        "line_number": 99,
+                        "content": "          stating that You changed the files; and"
+                    },
+                    {
+                        "line_number": 100,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 101,
+                        "content": "      (c) You must retain, in the Source form of any Derivative Works"
+                    },
+                    {
+                        "line_number": 102,
+                        "content": "          that You distribute, all copyright, patent, trademark, and"
+                    },
+                    {
+                        "line_number": 103,
+                        "content": "          attribution notices from the Source form of the Work,"
+                    },
+                    {
+                        "line_number": 104,
+                        "content": "          excluding those notices that do not pertain to any part of"
+                    },
+                    {
+                        "line_number": 105,
+                        "content": "          the Derivative Works; and"
+                    },
+                    {
+                        "line_number": 106,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 107,
+                        "content": "      (d) If the Work includes a \"NOTICE\" text file as part of its"
+                    },
+                    {
+                        "line_number": 108,
+                        "content": "          distribution, then any Derivative Works that You distribute must"
+                    },
+                    {
+                        "line_number": 109,
+                        "content": "          include a readable copy of the attribution notices contained"
+                    },
+                    {
+                        "line_number": 110,
+                        "content": "          within such NOTICE file, excluding those notices that do not"
+                    },
+                    {
+                        "line_number": 111,
+                        "content": "          pertain to any part of the Derivative Works, in at least one"
+                    },
+                    {
+                        "line_number": 112,
+                        "content": "          of the following places: within a NOTICE text file distributed"
+                    },
+                    {
+                        "line_number": 113,
+                        "content": "          as part of the Derivative Works; within the Source form or"
+                    },
+                    {
+                        "line_number": 114,
+                        "content": "          documentation, if provided along with the Derivative Works; or,"
+                    },
+                    {
+                        "line_number": 115,
+                        "content": "          within a display generated by the Derivative Works, if and"
+                    },
+                    {
+                        "line_number": 116,
+                        "content": "          wherever such third-party notices normally appear. The contents"
+                    },
+                    {
+                        "line_number": 117,
+                        "content": "          of the NOTICE file are for informational purposes only and"
+                    },
+                    {
+                        "line_number": 118,
+                        "content": "          do not modify the License. You may add Your own attribution"
+                    },
+                    {
+                        "line_number": 119,
+                        "content": "          notices within Derivative Works that You distribute, alongside"
+                    },
+                    {
+                        "line_number": 120,
+                        "content": "          or as an addendum to the NOTICE text from the Work, provided"
+                    },
+                    {
+                        "line_number": 121,
+                        "content": "          that such additional attribution notices cannot be construed"
+                    },
+                    {
+                        "line_number": 122,
+                        "content": "          as modifying the License."
+                    },
+                    {
+                        "line_number": 123,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 124,
+                        "content": "      You may add Your own copyright statement to Your modifications and"
+                    },
+                    {
+                        "line_number": 125,
+                        "content": "      may provide additional or different license terms and conditions"
+                    },
+                    {
+                        "line_number": 126,
+                        "content": "      for use, reproduction, or distribution of Your modifications, or"
+                    },
+                    {
+                        "line_number": 127,
+                        "content": "      for any such Derivative Works as a whole, provided Your use,"
+                    },
+                    {
+                        "line_number": 128,
+                        "content": "      reproduction, and distribution of the Work otherwise complies with"
+                    },
+                    {
+                        "line_number": 129,
+                        "content": "      the conditions stated in this License."
+                    },
+                    {
+                        "line_number": 130,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 131,
+                        "content": "   5. Submission of Contributions. Unless You explicitly state otherwise,"
+                    },
+                    {
+                        "line_number": 132,
+                        "content": "      any Contribution intentionally submitted for inclusion in the Work"
+                    },
+                    {
+                        "line_number": 133,
+                        "content": "      by You to the Licensor shall be under the terms and conditions of"
+                    },
+                    {
+                        "line_number": 134,
+                        "content": "      this License, without any additional terms or conditions."
+                    },
+                    {
+                        "line_number": 135,
+                        "content": "      Notwithstanding the above, nothing herein shall supersede or modify"
+                    },
+                    {
+                        "line_number": 136,
+                        "content": "      the terms of any separate license agreement you may have executed"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "      with Licensor regarding such Contributions."
+                    },
+                    {
+                        "line_number": 138,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 139,
+                        "content": "   6. Trademarks. This License does not grant permission to use the trade"
+                    },
+                    {
+                        "line_number": 140,
+                        "content": "      names, trademarks, service marks, or product names of the Licensor,"
+                    },
+                    {
+                        "line_number": 141,
+                        "content": "      except as required for reasonable and customary use in describing the"
+                    },
+                    {
+                        "line_number": 142,
+                        "content": "      origin of the Work and reproducing the content of the NOTICE file."
+                    },
+                    {
+                        "line_number": 143,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 144,
+                        "content": "   7. Disclaimer of Warranty. Unless required by applicable law or"
+                    },
+                    {
+                        "line_number": 145,
+                        "content": "      agreed to in writing, Licensor provides the Work (and each"
+                    },
+                    {
+                        "line_number": 146,
+                        "content": "      Contributor provides its Contributions) on an \"AS IS\" BASIS,"
+                    },
+                    {
+                        "line_number": 147,
+                        "content": "      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or"
+                    },
+                    {
+                        "line_number": 148,
+                        "content": "      implied, including, without limitation, any warranties or conditions"
+                    },
+                    {
+                        "line_number": 149,
+                        "content": "      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A"
+                    },
+                    {
+                        "line_number": 150,
+                        "content": "      PARTICULAR PURPOSE. You are solely responsible for determining the"
+                    },
+                    {
+                        "line_number": 151,
+                        "content": "      appropriateness of using or redistributing the Work and assume any"
+                    },
+                    {
+                        "line_number": 152,
+                        "content": "      risks associated with Your exercise of permissions under this License."
+                    },
+                    {
+                        "line_number": 153,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 154,
+                        "content": "   8. Limitation of Liability. In no event and under no legal theory,"
+                    },
+                    {
+                        "line_number": 155,
+                        "content": "      whether in tort (including negligence), contract, or otherwise,"
+                    },
+                    {
+                        "line_number": 156,
+                        "content": "      unless required by applicable law (such as deliberate and grossly"
+                    },
+                    {
+                        "line_number": 157,
+                        "content": "      negligent acts) or agreed to in writing, shall any Contributor be"
+                    },
+                    {
+                        "line_number": 158,
+                        "content": "      liable to You for damages, including any direct, indirect, special,"
+                    },
+                    {
+                        "line_number": 159,
+                        "content": "      incidental, or consequential damages of any character arising as a"
+                    },
+                    {
+                        "line_number": 160,
+                        "content": "      result of this License or out of the use or inability to use the"
+                    },
+                    {
+                        "line_number": 161,
+                        "content": "      Work (including but not limited to damages for loss of goodwill,"
+                    },
+                    {
+                        "line_number": 162,
+                        "content": "      work stoppage, computer failure or malfunction, or any and all"
+                    },
+                    {
+                        "line_number": 163,
+                        "content": "      other commercial damages or losses), even if such Contributor"
+                    },
+                    {
+                        "line_number": 164,
+                        "content": "      has been advised of the possibility of such damages."
+                    },
+                    {
+                        "line_number": 165,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 166,
+                        "content": "   9. Accepting Warranty or Additional Liability. While redistributing"
+                    },
+                    {
+                        "line_number": 167,
+                        "content": "      the Work or Derivative Works thereof, You may choose to offer,"
+                    },
+                    {
+                        "line_number": 168,
+                        "content": "      and charge a fee for, acceptance of support, warranty, indemnity,"
+                    },
+                    {
+                        "line_number": 169,
+                        "content": "      or other liability obligations and/or rights consistent with this"
+                    },
+                    {
+                        "line_number": 170,
+                        "content": "      License. However, in accepting such obligations, You may act only"
+                    },
+                    {
+                        "line_number": 171,
+                        "content": "      on Your own behalf and on Your sole responsibility, not on behalf"
+                    },
+                    {
+                        "line_number": 172,
+                        "content": "      of any other Contributor, and only if You agree to indemnify,"
+                    },
+                    {
+                        "line_number": 173,
+                        "content": "      defend, and hold each Contributor harmless for any liability"
+                    },
+                    {
+                        "line_number": 174,
+                        "content": "      incurred by, or claims asserted against, such Contributor by reason"
+                    },
+                    {
+                        "line_number": 175,
+                        "content": "      of your accepting any such warranty or additional liability."
+                    },
+                    {
+                        "line_number": 176,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 177,
+                        "content": "   END OF TERMS AND CONDITIONS"
+                    },
+                    {
+                        "line_number": 178,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 179,
+                        "content": "   APPENDIX: How to apply the Apache License to your work."
+                    },
+                    {
+                        "line_number": 180,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 181,
+                        "content": "      To apply the Apache License to your work, attach the following"
+                    },
+                    {
+                        "line_number": 182,
+                        "content": "      boilerplate notice, with the fields enclosed by brackets \"[]\""
+                    },
+                    {
+                        "line_number": 183,
+                        "content": "      replaced with your own identifying information. (Don't include"
+                    },
+                    {
+                        "line_number": 184,
+                        "content": "      the brackets!)  The text should be enclosed in the appropriate"
+                    },
+                    {
+                        "line_number": 185,
+                        "content": "      comment syntax for the file format. We also recommend that a"
+                    },
+                    {
+                        "line_number": 186,
+                        "content": "      file or class name and description of purpose be included on the"
+                    },
+                    {
+                        "line_number": 187,
+                        "content": "      same \"printed page\" as the copyright notice for easier"
+                    },
+                    {
+                        "line_number": 188,
+                        "content": "      identification within third-party archives."
+                    },
+                    {
+                        "line_number": 189,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 190,
+                        "content": "   Copyright [yyyy] [name of copyright owner]"
+                    },
+                    {
+                        "line_number": 191,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 192,
+                        "content": "   Licensed under the Apache License, Version 2.0 (the \"License\");"
+                    },
+                    {
+                        "line_number": 193,
+                        "content": "   you may not use this file except in compliance with the License."
+                    },
+                    {
+                        "line_number": 194,
+                        "content": "   You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 195,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 196,
+                        "content": "       http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 197,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 198,
+                        "content": "   Unless required by applicable law or agreed to in writing, software"
+                    },
+                    {
+                        "line_number": 199,
+                        "content": "   distributed under the License is distributed on an \"AS IS\" BASIS,"
+                    },
+                    {
+                        "line_number": 200,
+                        "content": "   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied."
+                    },
+                    {
+                        "line_number": 201,
+                        "content": "   See the License for the specific language governing permissions and"
+                    },
+                    {
+                        "line_number": 202,
+                        "content": "   limitations under the License."
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "Apache Sling Content Parser for XML"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "===="
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "This module is part of the [Apache Sling](https://sling.apache.org) project."
+                    },
+                    {
+                        "line_number": 4,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 5,
+                        "content": "The Apache Sling Content Parser for XML provides support for parsing XML files into Apache Sling resource trees, by implementing the"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "API provided by the [`org.apache.sling.contentparser.api`](https://github.com/apache/sling-whiteboard/tree/master/contentparser/org-apache-sling-contentparser-api) bundle."
+                    },
+                    {
+                        "line_number": 7,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "To obtain a reference to the XML content parser just filter on the `ContentParser.SERVICE_PROPERTY_CONTENT_TYPE` service registration"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "property:"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "```java"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "    @Reference(target = \"(\" + ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=\" + ContentParser.XML_CONTENT_TYPE + \")\")"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "    private ContentParser xmlParser;"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": "```"
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "0592e54835960528ceaad1c8bac219905092f76e",
+        "previous_commit_hash": "de2f2547fc065602a6ed21cfae6cff4ee317ff3a",
+        "diff_stats": {
+            "insertions": 6,
+            "deletions": 6,
+            "files_modified": 3
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 12,
+                        "content": "    @Reference(target = \"(\" + ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=xml)\")"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 12,
+                        "content": "    @Reference(target = \"(\" + ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=\" + ContentParser.XML_CONTENT_TYPE + \")\")"
+                    }
+                ]
+            },
+            {
+                "filename": "XMLContentParser.java",
+                "added_lines": [
+                    {
+                        "line_number": 52,
+                        "content": "                ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=xml\""
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "public final class XMLContentParser implements ContentParser {"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "    public XMLContentParser() {"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 52,
+                        "content": "                ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=\" + ContentParser.XML_CONTENT_TYPE"
+                    },
+                    {
+                        "line_number": 55,
+                        "content": "public final class XmlContentParser implements ContentParser {"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "    public XmlContentParser() {"
+                    }
+                ]
+            },
+            {
+                "filename": "XMLContentParserTest.java",
+                "added_lines": [
+                    {
+                        "line_number": 43,
+                        "content": "public class XMLContentParserTest {"
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "        underTest = new XMLContentParser();"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 43,
+                        "content": "public class XmlContentParserTest {"
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "        underTest = new XmlContentParser();"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "c3beddb8e3ffb3cb4e260e66c7e8598320c34946",
+        "previous_commit_hash": "0592e54835960528ceaad1c8bac219905092f76e",
+        "diff_stats": {
+            "insertions": 21,
+            "deletions": 1,
+            "files_modified": 2
+        },
+        "diff_content": [
+            {
+                "filename": "Jenkinsfile",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": " ~ Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " ~ or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": " ~ distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": " ~ regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": " ~ to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": " ~ \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": " ~ with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": " ~   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": " ~ Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": " ~ software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": " ~ \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": " ~ KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": " ~ specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": " ~ under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/"
+                    },
+                    {
+                        "line_number": 19,
+                        "content": "// please rebuild"
+                    },
+                    {
+                        "line_number": 20,
+                        "content": "slingOsgiBundleBuild()"
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 6,
+                        "content": "API provided by the [`org.apache.sling.contentparser.api`](https://github.com/apache/sling-org-apache-sling-contentparser-api) bundle."
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 6,
+                        "content": "API provided by the [`org.apache.sling.contentparser.api`](https://github.com/apache/sling-whiteboard/tree/master/contentparser/org-apache-sling-contentparser-api) bundle."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "de2ec7a97917e46b2a0a2cd9c65ef06661faa3d9",
+        "previous_commit_hash": "c3beddb8e3ffb3cb4e260e66c7e8598320c34946",
+        "diff_stats": {
+            "insertions": 4,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "[<img src=\"https://sling.apache.org/res/logos/sling.png\"/>](https://sling.apache.org)"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://builds.apache.org/buildStatus/icon?job=Sling/sling-org-apache-sling-contentparser-xml/master)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master) [![Test Status](https://img.shields.io/jenkins/t/https/builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master.svg)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master/test_results_analyzer/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": ""
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "de79df26a1952a6fccdd8d88120f1559fe959a2c",
+        "previous_commit_hash": "de2ec7a97917e46b2a0a2cd9c65ef06661faa3d9",
+        "diff_stats": {
+            "insertions": 29,
+            "deletions": 24,
+            "files_modified": 2
+        },
+        "diff_content": [
+            {
+                "filename": "XMLContentParser.java",
+                "added_lines": [
+                    {
+                        "line_number": 29,
+                        "content": "import javax.xml.XMLConstants;"
+                    },
+                    {
+                        "line_number": 59,
+                        "content": "        try {"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();"
+                    },
+                    {
+                        "line_number": 61,
+                        "content": "            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_DTD, \"\");"
+                    },
+                    {
+                        "line_number": 62,
+                        "content": "            dbf.setAttribute(XMLConstants.ACCESS_EXTERNAL_SCHEMA, \"\");"
+                    },
+                    {
+                        "line_number": 63,
+                        "content": "            dbf.setAttribute(XMLConstants.FEATURE_SECURE_PROCESSING, Boolean.TRUE);"
+                    },
+                    {
+                        "line_number": 64,
+                        "content": "            dbf.setExpandEntityReferences(false);"
+                    },
+                    {
+                        "line_number": 65,
+                        "content": "            documentBuilderFactory = dbf;"
+                    },
+                    {
+                        "line_number": 66,
+                        "content": "        } catch (IllegalArgumentException e) {"
+                    },
+                    {
+                        "line_number": 67,
+                        "content": "            throw new IllegalStateException(\"Cannot disable DTD features.\", e);"
+                    },
+                    {
+                        "line_number": 68,
+                        "content": "        }"
+                    },
+                    {
+                        "line_number": 72,
+                        "content": "    public void parse(ContentHandler handler, InputStream is, ParserOptions parserOptions) throws IOException {"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "        } catch (Exception ex) {"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "            throw new IOException(\"Error parsing JCR XML content.\", ex);"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "    private void parse(ContentHandler handler, Element element, ParserOptions parserOptions, String parentPath) throws IOException {"
+                    },
+                    {
+                        "line_number": 90,
+                        "content": "                throw new IOException(\"Child node without name detected below path \" + parentPath);"
+                    },
+                    {
+                        "line_number": 102,
+                        "content": "        if (StringUtils.isNotBlank(primaryType) && !parserOptions.getIgnorePropertyNames().contains(JCR_PRIMARY_TYPE)) {"
+                    },
+                    {
+                        "line_number": 103,
+                        "content": "            properties.put(JCR_PRIMARY_TYPE, primaryType);"
+                    },
+                    {
+                        "line_number": 117,
+                        "content": "                throw new IOException(\"Property without name detected at path \" + path);"
+                    },
+                    {
+                        "line_number": 126,
+                        "content": "                throw new IOException(\"Property '\" + name + \"' has no type at path \" + path);"
+                    },
+                    {
+                        "line_number": 148,
+                        "content": "        if (defaultPrimaryType != null && !properties.containsKey(JCR_PRIMARY_TYPE)) {"
+                    },
+                    {
+                        "line_number": 149,
+                        "content": "            properties.put(JCR_PRIMARY_TYPE, defaultPrimaryType);"
+                    },
+                    {
+                        "line_number": 177,
+                        "content": "    private String getChildText(Element element, String childName) throws IOException {"
+                    },
+                    {
+                        "line_number": 184,
+                        "content": "            throw new IOException(\"Found multiple elements with name '\" + childName + \"': \" + children.size());"
+                    },
+                    {
+                        "line_number": 217,
+                        "content": "                throw new IllegalArgumentException(String.format(\"Unsupported property type: %s.\", type));"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 31,
+                        "content": "import javax.xml.parsers.ParserConfigurationException;"
+                    },
+                    {
+                        "line_number": 36,
+                        "content": "import org.apache.sling.contentparser.api.ParseException;"
+                    },
+                    {
+                        "line_number": 44,
+                        "content": "import org.xml.sax.SAXException;"
+                    },
+                    {
+                        "line_number": 61,
+                        "content": "        documentBuilderFactory = DocumentBuilderFactory.newInstance();"
+                    },
+                    {
+                        "line_number": 65,
+                        "content": "    public void parse(ContentHandler handler, InputStream is, ParserOptions parserOptions) throws IOException, ParseException {"
+                    },
+                    {
+                        "line_number": 70,
+                        "content": "        } catch (ParserConfigurationException | SAXException ex) {"
+                    },
+                    {
+                        "line_number": 71,
+                        "content": "            throw new ParseException(\"Error parsing JCR XML content.\", ex);"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "    private void parse(ContentHandler handler, Element element, ParserOptions parserOptions, String parentPath) {"
+                    },
+                    {
+                        "line_number": 83,
+                        "content": "                throw new ParseException(\"Child node without name detected below path \" + parentPath);"
+                    },
+                    {
+                        "line_number": 95,
+                        "content": "        if (StringUtils.isNotBlank(primaryType) && !parserOptions.getIgnorePropertyNames().contains(\"jcr:primaryType\")) {"
+                    },
+                    {
+                        "line_number": 96,
+                        "content": "            properties.put(\"jcr:primaryType\", primaryType);"
+                    },
+                    {
+                        "line_number": 110,
+                        "content": "                throw new ParseException(\"Property without name detected at path \" + path);"
+                    },
+                    {
+                        "line_number": 119,
+                        "content": "                throw new ParseException(\"Property '\" + name + \"' has no type at path \" + path);"
+                    },
+                    {
+                        "line_number": 141,
+                        "content": "        if (defaultPrimaryType != null) {"
+                    },
+                    {
+                        "line_number": 142,
+                        "content": "            if (!properties.containsKey(JCR_PRIMARY_TYPE)) {"
+                    },
+                    {
+                        "line_number": 143,
+                        "content": "                properties.put(JCR_PRIMARY_TYPE, defaultPrimaryType);"
+                    },
+                    {
+                        "line_number": 144,
+                        "content": "            }"
+                    },
+                    {
+                        "line_number": 172,
+                        "content": "    private String getChildText(Element element, String childName) {"
+                    },
+                    {
+                        "line_number": 179,
+                        "content": "            throw new ParseException(\"Found multiple elements with name '\" + childName + \"': \" + children.size());"
+                    },
+                    {
+                        "line_number": 212,
+                        "content": "                throw new ParseException(String.format(\"Unsupported property type: %s.\", type));"
+                    }
+                ]
+            },
+            {
+                "filename": "XMLContentParserTest.java",
+                "added_lines": [
+                    {
+                        "line_number": 22,
+                        "content": "import java.io.IOException;"
+                    },
+                    {
+                        "line_number": 117,
+                        "content": "    @Test(expected = IOException.class)"
+                    },
+                    {
+                        "line_number": 125,
+                        "content": "    @Test(expected = IOException.class)"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "                        .ignorePropertyNames(Collections.unmodifiableSet(new HashSet<>(Collections.singletonList(\"jcr:title\")))), file);"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 31,
+                        "content": "import org.apache.sling.contentparser.api.ParseException;"
+                    },
+                    {
+                        "line_number": 117,
+                        "content": "    @Test(expected = ParseException.class)"
+                    },
+                    {
+                        "line_number": 125,
+                        "content": "    @Test(expected = ParseException.class)"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "                        .ignorePropertyNames(Collections.unmodifiableSet(new HashSet<>(Arrays.asList(\"jcr:title\")))), file);"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "840bfcb54e71006f70c335e8d4e181961b44d0fc",
+        "previous_commit_hash": "de79df26a1952a6fccdd8d88120f1559fe959a2c",
+        "diff_stats": {
+            "insertions": 6,
+            "deletions": 7,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 20,
+                        "content": "<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">"
+                    },
+                    {
+                        "line_number": 26,
+                        "content": "        <relativePath />"
+                    },
+                    {
+                        "line_number": 30,
+                        "content": "    <version>2.0.0</version>"
+                    },
+                    {
+                        "line_number": 41,
+                        "content": "        <tag>org.apache.sling.contentparser.xml-2.0.0</tag>"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            <version>2.0.0</version>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <version>2.0.0</version>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 20,
+                        "content": "<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
+                    },
+                    {
+                        "line_number": 21,
+                        "content": "         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">"
+                    },
+                    {
+                        "line_number": 27,
+                        "content": "        <relativePath/>"
+                    },
+                    {
+                        "line_number": 31,
+                        "content": "    <version>0.9.0-SNAPSHOT</version>"
+                    },
+                    {
+                        "line_number": 42,
+                        "content": "        <tag>HEAD</tag>"
+                    },
+                    {
+                        "line_number": 61,
+                        "content": "            <version>0.9.0-SNAPSHOT</version>"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "            <version>0.9.0-SNAPSHOT</version>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "20978b7624aac7744b5689b124bfa2f6e19bca49",
+        "previous_commit_hash": "840bfcb54e71006f70c335e8d4e181961b44d0fc",
+        "diff_stats": {
+            "insertions": 4,
+            "deletions": 4,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 30,
+                        "content": "    <version>2.0.1-SNAPSHOT</version>"
+                    },
+                    {
+                        "line_number": 41,
+                        "content": "        <tag>HEAD</tag>"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            <version>2.0.1-SNAPSHOT</version>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <version>2.0.1-SNAPSHOT</version>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 30,
+                        "content": "    <version>2.0.0</version>"
+                    },
+                    {
+                        "line_number": 41,
+                        "content": "        <tag>org.apache.sling.contentparser.xml-2.0.0</tag>"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            <version>2.0.0</version>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <version>2.0.0</version>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "15332cb77a2dd5a61cb96c4ce1d19125ae99f153",
+        "previous_commit_hash": "20978b7624aac7744b5689b124bfa2f6e19bca49",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 1,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://builds.apache.org/buildStatus/icon?job=Sling/sling-org-apache-sling-contentparser-xml/master)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master) [![Test Status](https://img.shields.io/jenkins/t/https/builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master.svg)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master/test_results_analyzer/) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22) [![JavaDocs](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.contentparser.xml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://builds.apache.org/buildStatus/icon?job=Sling/sling-org-apache-sling-contentparser-xml/master)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master) [![Test Status](https://img.shields.io/jenkins/t/https/builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master.svg)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master/test_results_analyzer/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "8dc630f5eb09c470c3c239f796db5a837c3576e4",
+        "previous_commit_hash": "15332cb77a2dd5a61cb96c4ce1d19125ae99f153",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 1,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/badge/icon)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/) [![Test Status](https://img.shields.io/jenkins/tests.svg?jobUrl=https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/test/?width=800&height=600) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=coverage)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=alert_status)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22) [![JavaDocs](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.contentparser.xml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://builds.apache.org/buildStatus/icon?job=Sling/sling-org-apache-sling-contentparser-xml/master)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master) [![Test Status](https://img.shields.io/jenkins/t/https/builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master.svg)](https://builds.apache.org/job/Sling/job/sling-org-apache-sling-contentparser-xml/job/master/test_results_analyzer/) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22) [![JavaDocs](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.contentparser.xml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "0b691612d3fd554e2b8e130b5b015cd52e999bb5",
+        "previous_commit_hash": "8dc630f5eb09c470c3c239f796db5a837c3576e4",
+        "diff_stats": {
+            "insertions": 2,
+            "deletions": 2,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "[![Apache Sling](https://sling.apache.org/res/logos/sling.png)](https://sling.apache.org)"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "&#32;[![Build Status](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/badge/icon)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)&#32;[![Test Status](https://img.shields.io/jenkins/tests.svg?jobUrl=https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/test/?width=800&height=600)&#32;[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=coverage)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=alert_status)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![JavaDoc](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org-apache-sling-contentparser-xml)&#32;[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22)&#32;[![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/group/contentparser.md) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "[<img src=\"https://sling.apache.org/res/logos/sling.png\"/>](https://sling.apache.org)"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " [![Build Status](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/badge/icon)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/) [![Test Status](https://img.shields.io/jenkins/tests.svg?jobUrl=https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/test/?width=800&height=600) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=coverage)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml) [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=alert_status)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22) [![JavaDocs](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.contentparser.xml) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "3a21510ea54385b26d94fda87da6899a9599b187",
+        "previous_commit_hash": "0b691612d3fd554e2b8e130b5b015cd52e999bb5",
+        "diff_stats": {
+            "insertions": 0,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "SECURITY.md",
+                "added_lines": [],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "bcd1d8164142edb802a716a9cc72699b47852719",
+        "previous_commit_hash": "3a21510ea54385b26d94fda87da6899a9599b187",
+        "diff_stats": {
+            "insertions": 13,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "SECURITY.md",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "# Security Policy for Apache Sling modules"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "This module is part of the [Apache Sling Project](https://sling.apache.org), a"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "project of the [Apache Software Foundation](https://apache.org) (ASF)."
+                    },
+                    {
+                        "line_number": 5,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "It follows the ASF's [vulnerability handling process](https://apache.org/security/#vulnerability-handling) and"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": "provides its own [security information page](http://sling.apache.org/project-information/security.html)."
+                    },
+                    {
+                        "line_number": 8,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "## Reporting a Vulnerability"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "To report a new vulnerability you have discovered in an Apache Sling module,"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "please follow the instructions on the"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "[project's security page](http://sling.apache.org/project-information/security.html) ."
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "9c358be4a6af6a1f9de63e89a341ce8a8fcb13f7",
+        "previous_commit_hash": "bcd1d8164142edb802a716a9cc72699b47852719",
+        "diff_stats": {
+            "insertions": 0,
+            "deletions": 13,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "SECURITY.md",
+                "added_lines": [],
+                "deleted_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "# Security Policy for Apache Sling modules"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "This module is part of the [Apache Sling Project](https://sling.apache.org), a"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "project of the [Apache Software Foundation](https://apache.org) (ASF)."
+                    },
+                    {
+                        "line_number": 5,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "It follows the ASF's [vulnerability handling process](https://apache.org/security/#vulnerability-handling) and"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": "provides its own [security information page](http://sling.apache.org/project-information/security.html)."
+                    },
+                    {
+                        "line_number": 8,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "## Reporting a Vulnerability"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "To report a new vulnerability you have discovered in an Apache Sling module,"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": "please follow the instructions on the"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": "[project's security page](http://sling.apache.org/project-information/security.html) ."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "85b3bb4b78cbb45a78b31fba10dbe0c47e4f026d",
+        "previous_commit_hash": "9c358be4a6af6a1f9de63e89a341ce8a8fcb13f7",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 1,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "README.md",
+                "added_lines": [
+                    {
+                        "line_number": 3,
+                        "content": "&#32;[![Build Status](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/badge/icon)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)&#32;[![Test Status](https://img.shields.io/jenkins/tests.svg?jobUrl=https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/test/?width=800&height=600)&#32;[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=coverage)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=alert_status)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![JavaDoc](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.contentparser.xml)&#32;[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22)&#32;[![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/groups/contentparser.md) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 3,
+                        "content": "&#32;[![Build Status](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/badge/icon)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)&#32;[![Test Status](https://img.shields.io/jenkins/tests.svg?jobUrl=https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/)](https://ci-builds.apache.org/job/Sling/job/modules/job/sling-org-apache-sling-contentparser-xml/job/master/test/?width=800&height=600)&#32;[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=coverage)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=apache_sling-org-apache-sling-contentparser-xml&metric=alert_status)](https://sonarcloud.io/dashboard?id=apache_sling-org-apache-sling-contentparser-xml)&#32;[![JavaDoc](https://www.javadoc.io/badge/org.apache.sling/org.apache.sling.contentparser.xml.svg)](https://www.javadoc.io/doc/org.apache.sling/org-apache-sling-contentparser-xml)&#32;[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.apache.sling/org.apache.sling.contentparser.xml/badge.svg)](https://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.sling%22%20a%3A%22org.apache.sling.contentparser.xml%22)&#32;[![contentparser](https://sling.apache.org/badges/group-contentparser.svg)](https://github.com/apache/sling-aggregator/blob/master/docs/group/contentparser.md) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "9801fe2d38f0319b6bd1d1cbc7901374b2d1ca66",
+        "previous_commit_hash": "85b3bb4b78cbb45a78b31fba10dbe0c47e4f026d",
+        "diff_stats": {
+            "insertions": 11,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": ".asf.yaml",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "github:"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "  autolink_jira:"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "  - \"SLING\""
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "  - \"OAK\""
+                    },
+                    {
+                        "line_number": 5,
+                        "content": "  - \"JCR\""
+                    },
+                    {
+                        "line_number": 6,
+                        "content": "  - \"JCRVLT\""
+                    },
+                    {
+                        "line_number": 7,
+                        "content": "  - \"INFRA\""
+                    },
+                    {
+                        "line_number": 8,
+                        "content": "  - \"FELIX\""
+                    },
+                    {
+                        "line_number": 9,
+                        "content": "  - \"MNG\""
+                    },
+                    {
+                        "line_number": 10,
+                        "content": "notifications:"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": "  jira_options: \"link\""
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "981f80279e5b9cba99d7d55fd8adc6b6f895d4ec",
+        "previous_commit_hash": "9801fe2d38f0319b6bd1d1cbc7901374b2d1ca66",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 1,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 40,
+                        "content": "        <url>https://github.com/apache/sling-org-apache-sling-contentparser-xml.git</url>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 40,
+                        "content": "        <url>https://gitbox.apache.org/repos/asf?p=sling-org-apache-sling-contentparser-xml.git</url>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "81f9fd2126e1eb56ea7da9c4abcc74f8c7f4d51a",
+        "previous_commit_hash": "981f80279e5b9cba99d7d55fd8adc6b6f895d4ec",
+        "diff_stats": {
+            "insertions": 3,
+            "deletions": 3,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 25,
+                        "content": "        <version>52</version>"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            <version>2.0.0</version>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <version>2.0.0</version>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 25,
+                        "content": "        <version>35</version>"
+                    },
+                    {
+                        "line_number": 60,
+                        "content": "            <version>2.0.1-SNAPSHOT</version>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "            <version>2.0.1-SNAPSHOT</version>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "edc6f841e62a011d37f90f64a61650f9d51a0f42",
+        "previous_commit_hash": "81f9fd2126e1eb56ea7da9c4abcc74f8c7f4d51a",
+        "diff_stats": {
+            "insertions": 6,
+            "deletions": 1,
+            "files_modified": 2
+        },
+        "diff_content": [
+            {
+                "filename": ".sling-module.json",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "{"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": "  \"jenkins\": {"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": "    \"jdks\": [17, 21]"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": "  }"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": "}"
+                    }
+                ],
+                "deleted_lines": []
+            },
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 25,
+                        "content": "        <version>60</version>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 25,
+                        "content": "        <version>52</version>"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "5af3f77f9eb497135a9cf641ef99f98e9c199986",
+        "previous_commit_hash": "edc6f841e62a011d37f90f64a61650f9d51a0f42",
+        "diff_stats": {
+            "insertions": 72,
+            "deletions": 73,
+            "files_modified": 3
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+                    },
+                    {
+                        "line_number": 33,
+                        "content": "    <description>Apache Sling Content Parser for resource trees stored in XML files</description>"
+                    },
+                    {
+                        "line_number": 39,
+                        "content": "        <url>https://github.com/apache/sling-org-apache-sling-contentparser-xml.git</url>"
+                    },
+                    {
+                        "line_number": 72,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 73,
+                        "content": "    <build>"
+                    },
+                    {
+                        "line_number": 74,
+                        "content": "        <plugins>"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "            <plugin>"
+                    },
+                    {
+                        "line_number": 76,
+                        "content": "                <groupId>biz.aQute.bnd</groupId>"
+                    },
+                    {
+                        "line_number": 77,
+                        "content": "                <artifactId>bnd-baseline-maven-plugin</artifactId>"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "                <configuration>"
+                    },
+                    {
+                        "line_number": 79,
+                        "content": "                    <failOnMissing>false</failOnMissing>"
+                    },
+                    {
+                        "line_number": 80,
+                        "content": "                </configuration>"
+                    },
+                    {
+                        "line_number": 81,
+                        "content": "            </plugin>"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "        </plugins>"
+                    },
+                    {
+                        "line_number": 83,
+                        "content": "    </build>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"
+                    },
+                    {
+                        "line_number": 33,
+                        "content": "    <description>"
+                    },
+                    {
+                        "line_number": 34,
+                        "content": "        Apache Sling Content Parser for resource trees stored in XML files"
+                    },
+                    {
+                        "line_number": 35,
+                        "content": "    </description>"
+                    },
+                    {
+                        "line_number": 40,
+                        "content": "        <url>https://github.com/apache/sling-org-apache-sling-contentparser-xml.git</url>"
+                    },
+                    {
+                        "line_number": 44,
+                        "content": "    <build>"
+                    },
+                    {
+                        "line_number": 45,
+                        "content": "        <plugins>"
+                    },
+                    {
+                        "line_number": 46,
+                        "content": "            <plugin>"
+                    },
+                    {
+                        "line_number": 47,
+                        "content": "                <groupId>biz.aQute.bnd</groupId>"
+                    },
+                    {
+                        "line_number": 48,
+                        "content": "                <artifactId>bnd-baseline-maven-plugin</artifactId>"
+                    },
+                    {
+                        "line_number": 49,
+                        "content": "                <configuration>"
+                    },
+                    {
+                        "line_number": 50,
+                        "content": "                    <failOnMissing>false</failOnMissing>"
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "                </configuration>"
+                    },
+                    {
+                        "line_number": 52,
+                        "content": "            </plugin>"
+                    },
+                    {
+                        "line_number": 53,
+                        "content": "        </plugins>"
+                    },
+                    {
+                        "line_number": 54,
+                        "content": "    </build>"
+                    },
+                    {
+                        "line_number": 55,
+                        "content": ""
+                    }
+                ]
+            },
+            {
+                "filename": "XMLContentParser.java",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/*"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": " * Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " * or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": " * distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": " * regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": " * to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": " * \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": " * with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": " *"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": " *   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": " *"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": " * Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": " * software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": " * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": " * KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": " * specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": " * under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": " */"
+                    },
+                    {
+                        "line_number": 21,
+                        "content": "import javax.xml.XMLConstants;"
+                    },
+                    {
+                        "line_number": 22,
+                        "content": "import javax.xml.parsers.DocumentBuilder;"
+                    },
+                    {
+                        "line_number": 23,
+                        "content": "import javax.xml.parsers.DocumentBuilderFactory;"
+                    },
+                    {
+                        "line_number": 24,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 48,
+                        "content": "@Component(property = {ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=xml\"})"
+                    },
+                    {
+                        "line_number": 78,
+                        "content": "    private void parse(ContentHandler handler, Element element, ParserOptions parserOptions, String parentPath)"
+                    },
+                    {
+                        "line_number": 79,
+                        "content": "            throws IOException {"
+                    },
+                    {
+                        "line_number": 99,
+                        "content": "        if (StringUtils.isNotBlank(primaryType)"
+                    },
+                    {
+                        "line_number": 100,
+                        "content": "                && !parserOptions.getIgnorePropertyNames().contains(JCR_PRIMARY_TYPE)) {"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": " ~ Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " ~ or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": " ~ distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": " ~ regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": " ~ to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": " ~ \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": " ~ with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": " ~   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": " ~ Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": " ~ software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": " ~ \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": " ~ KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": " ~ specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": " ~ under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/"
+                    },
+                    {
+                        "line_number": 29,
+                        "content": "import javax.xml.XMLConstants;"
+                    },
+                    {
+                        "line_number": 30,
+                        "content": "import javax.xml.parsers.DocumentBuilder;"
+                    },
+                    {
+                        "line_number": 31,
+                        "content": "import javax.xml.parsers.DocumentBuilderFactory;"
+                    },
+                    {
+                        "line_number": 32,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 48,
+                        "content": "@Component("
+                    },
+                    {
+                        "line_number": 49,
+                        "content": "        property = {"
+                    },
+                    {
+                        "line_number": 50,
+                        "content": "                ContentParser.SERVICE_PROPERTY_CONTENT_TYPE + \"=xml\""
+                    },
+                    {
+                        "line_number": 51,
+                        "content": "        }"
+                    },
+                    {
+                        "line_number": 52,
+                        "content": ")"
+                    },
+                    {
+                        "line_number": 82,
+                        "content": "    private void parse(ContentHandler handler, Element element, ParserOptions parserOptions, String parentPath) throws IOException {"
+                    },
+                    {
+                        "line_number": 102,
+                        "content": "        if (StringUtils.isNotBlank(primaryType) && !parserOptions.getIgnorePropertyNames().contains(JCR_PRIMARY_TYPE)) {"
+                    },
+                    {
+                        "line_number": 158,
+                        "content": ""
+                    },
+                    {
+                        "line_number": 228,
+                        "content": ""
+                    }
+                ]
+            },
+            {
+                "filename": "XMLContentParserTest.java",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/*"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": " * Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " * or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": " * distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": " * regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": " * to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": " * \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": " * with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": " *"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": " *   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": " *"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": " * Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": " * software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": " * \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": " * KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": " * specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": " * under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": " */"
+                    },
+                    {
+                        "line_number": 73,
+                        "content": "        assertArrayEquals(new Long[] {1234567890123L, 55L}, (Long[]) props.get(\"longPropMulti\"));"
+                    },
+                    {
+                        "line_number": 74,
+                        "content": "        assertArrayEquals(new BigDecimal[] {new BigDecimal(\"1.2345\"), new BigDecimal(\"1.1\")}, (BigDecimal[])"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "                props.get(\"decimalPropMulti\"));"
+                    },
+                    {
+                        "line_number": 76,
+                        "content": "        assertArrayEquals(new Boolean[] {true, false}, (Boolean[]) props.get(\"booleanPropMulti\"));"
+                    },
+                    {
+                        "line_number": 136,
+                        "content": "        ContentElement content = TestUtils.parse("
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "                underTest,"
+                    },
+                    {
+                        "line_number": 138,
+                        "content": "                new ParserOptions()"
+                    },
+                    {
+                        "line_number": 139,
+                        "content": "                        .ignoreResourceNames("
+                    },
+                    {
+                        "line_number": 140,
+                        "content": "                                Collections.unmodifiableSet(new HashSet<>(Arrays.asList(\"header\", \"newslist\"))))"
+                    },
+                    {
+                        "line_number": 141,
+                        "content": "                        .ignorePropertyNames("
+                    },
+                    {
+                        "line_number": 142,
+                        "content": "                                Collections.unmodifiableSet(new HashSet<>(Collections.singletonList(\"jcr:title\")))),"
+                    },
+                    {
+                        "line_number": 143,
+                        "content": "                file);"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                    },
+                    {
+                        "line_number": 2,
+                        "content": " ~ Licensed to the Apache Software Foundation (ASF) under one"
+                    },
+                    {
+                        "line_number": 3,
+                        "content": " ~ or more contributor license agreements.  See the NOTICE file"
+                    },
+                    {
+                        "line_number": 4,
+                        "content": " ~ distributed with this work for additional information"
+                    },
+                    {
+                        "line_number": 5,
+                        "content": " ~ regarding copyright ownership.  The ASF licenses this file"
+                    },
+                    {
+                        "line_number": 6,
+                        "content": " ~ to you under the Apache License, Version 2.0 (the"
+                    },
+                    {
+                        "line_number": 7,
+                        "content": " ~ \"License\"); you may not use this file except in compliance"
+                    },
+                    {
+                        "line_number": 8,
+                        "content": " ~ with the License.  You may obtain a copy of the License at"
+                    },
+                    {
+                        "line_number": 9,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 10,
+                        "content": " ~   http://www.apache.org/licenses/LICENSE-2.0"
+                    },
+                    {
+                        "line_number": 11,
+                        "content": " ~"
+                    },
+                    {
+                        "line_number": 12,
+                        "content": " ~ Unless required by applicable law or agreed to in writing,"
+                    },
+                    {
+                        "line_number": 13,
+                        "content": " ~ software distributed under the License is distributed on an"
+                    },
+                    {
+                        "line_number": 14,
+                        "content": " ~ \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY"
+                    },
+                    {
+                        "line_number": 15,
+                        "content": " ~ KIND, either express or implied.  See the License for the"
+                    },
+                    {
+                        "line_number": 16,
+                        "content": " ~ specific language governing permissions and limitations"
+                    },
+                    {
+                        "line_number": 17,
+                        "content": " ~ under the License."
+                    },
+                    {
+                        "line_number": 18,
+                        "content": " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/"
+                    },
+                    {
+                        "line_number": 73,
+                        "content": "        assertArrayEquals(new Long[]{1234567890123L, 55L}, (Long[]) props.get(\"longPropMulti\"));"
+                    },
+                    {
+                        "line_number": 74,
+                        "content": "        assertArrayEquals(new BigDecimal[]{new BigDecimal(\"1.2345\"), new BigDecimal(\"1.1\")}, (BigDecimal[]) props.get(\"decimalPropMulti\"));"
+                    },
+                    {
+                        "line_number": 75,
+                        "content": "        assertArrayEquals(new Boolean[]{true, false}, (Boolean[]) props.get(\"booleanPropMulti\"));"
+                    },
+                    {
+                        "line_number": 135,
+                        "content": "        ContentElement content = TestUtils.parse(underTest,"
+                    },
+                    {
+                        "line_number": 136,
+                        "content": "                new ParserOptions().ignoreResourceNames(Collections.unmodifiableSet(new HashSet<>(Arrays.asList(\"header\", \"newslist\"))))"
+                    },
+                    {
+                        "line_number": 137,
+                        "content": "                        .ignorePropertyNames(Collections.unmodifiableSet(new HashSet<>(Collections.singletonList(\"jcr:title\")))), file);"
+                    },
+                    {
+                        "line_number": 169,
+                        "content": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "commit_hash": "4ca3c865cdafa504b1f6de6759cfa90500a07a91",
+        "previous_commit_hash": "5af3f77f9eb497135a9cf641ef99f98e9c199986",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 0,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": ".git-blame-ignore-revs",
+                "added_lines": [
+                    {
+                        "line_number": 1,
+                        "content": "5af3f77f9eb497135a9cf641ef99f98e9c199986"
+                    }
+                ],
+                "deleted_lines": []
+            }
+        ]
+    },
+    {
+        "commit_hash": "7481cad4a4ab0908e37698cacfb3cbe2603a0536",
+        "previous_commit_hash": "4ca3c865cdafa504b1f6de6759cfa90500a07a91",
+        "diff_stats": {
+            "insertions": 1,
+            "deletions": 1,
+            "files_modified": 1
+        },
+        "diff_content": [
+            {
+                "filename": "pom.xml",
+                "added_lines": [
+                    {
+                        "line_number": 52,
+                        "content": "            <version>3.12.0</version>"
+                    }
+                ],
+                "deleted_lines": [
+                    {
+                        "line_number": 52,
+                        "content": "            <version>3.8</version>"
+                    }
+                ]
+            }
+        ]
+    }
+]
