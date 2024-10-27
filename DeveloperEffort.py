@@ -1,7 +1,7 @@
 import json
 import subprocess
 import csv
-import os
+from pathlib import Path
 
 def run_scc(repo_path):
     """
@@ -21,7 +21,6 @@ def run_scc(repo_path):
 
         total_tloc = 0
         for line in result.splitlines():
-            print(f"Processing line: {line}") 
             if "Total" in line:
                 parts = line.split()
                 if len(parts) >= 3 and parts[2].isdigit(): 
@@ -60,9 +59,14 @@ def collect_refactoring_developer_effort(repo_path, refminer_output_path, output
     """
     Collect developer effort for refactorings and store the results in a CSV file.
     """
+    
     with open(refminer_output_path, 'r') as json_file:
         refactorings_data = json.load(json_file)
 
+    
+    p = Path(output_csv_path)
+    directory = str(p.parent)
+    Path(directory).mkdir(parents=True, exist_ok=True)
     with open(output_csv_path, mode='w', newline='', encoding='utf-8') as csv_file:
         writer = csv.writer(csv_file)
         # Add columns for both current and previous LOC
