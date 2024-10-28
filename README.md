@@ -15,7 +15,7 @@ This project aims to analyze refactoring efforts in various open-source reposito
 - **RefactoringRunner.py**:
   - Clones a GitHub repository and runs Refactoring Miner to analyze refactoring efforts. The analysis results are saved as JSON files in the `RefactoringMinerOutputs` directory.
 
-  - **DeveloperEffort.py**:
+- **DeveloperEffort.py**:
   - Creates a csv file containing the developer effort information of the refactoring commits (retrieved from the `RefactoringRunner.py` JSON output) using the SCC tool. The csv output is saved in the `DeveloperEffortsOutput` directory.
 
 - **Runner.py**:
