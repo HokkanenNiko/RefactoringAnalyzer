@@ -10,6 +10,7 @@ def run_scc(repo_path):
     include_ext = 'c,cpp,h,hpp,py,java,js,rb,go,cs,php,swift,ts,rs,kt,scala,pl,sh,ps1'  # Include only these languages (can be modified)
 
     try:
+        #SCC command to be executed with the flags
         scc_command = f'scc --no-complexity --by-file --include-ext {include_ext}'
 
         result = subprocess.check_output(
@@ -92,6 +93,7 @@ def collect_refactoring_developer_effort(repo_path, refminer_output_path, output
                 writer.writerow([developer, commit_hash, parent_hash, tloc_diff, current_tloc, previous_tloc])
 
             else:
+                # Skip the commits that have no refactorings
                 print(f"Skipping commit {commit_hash} (no refactorings)")
 
     print(f"Developer effort analysis saved to {output_csv_path}")
