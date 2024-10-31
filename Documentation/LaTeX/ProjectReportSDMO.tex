@@ -3,11 +3,50 @@
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
 \title{RefactoringAnalyzer Project Report}
-\author{Niko Hokkanen, Carlos Pantin, Paavo Parviainen, Niko Siltala, Jack Sundholm}
+\author{Niko Hokkanen}
+\affiliation{%
+  \institution{University of Oulu}
+  \city{Oulu}
+  \country{Finland}
+}
+
+\author{Carlos Pantin}
+\affiliation{%
+  \institution{University of Oulu}
+  \city{Oulu}
+  \country{Finland}
+}
+
+\author{Paavo Parviainen}
+\affiliation{%
+  \institution{University of Oulu}
+  \city{Oulu}
+  \country{Finland}
+}
+
+\author{Niko Siltala}
+\affiliation{%
+  \institution{University of Oulu}
+  \city{Oulu}
+  \country{Finland}
+}
+
+\author{Jack Sundholm}
+\affiliation{%
+  \institution{University of Oulu}
+  \city{Oulu}
+  \country{Finland}
+}
 \date{\today}
 \usepackage{pdfpages}
 
+
 \begin{document}
+\begin{abstract}
+This report, part of the Software Development, Maintenance, and Operations course in Fall 2024, explores refactoring activities across software projects, focusing on developer effort and bug-fixing commits. Utilizing tools like RefactoringMiner and custom Python scripts, the project analyzes code modifications and tracks developer effort (measured through Touched Lines of Code, TLOC) and bug-related issues through GitHub’s API. The methodology includes repository cloning, refactoring identification, commit difference analysis, and developer effort quantification. Results are compiled into structured datasets (JSON, CSV), offering insights into refactoring practices and their impact on software maintenance and bug resolution.
+\end{abstract}
+
+\keywords{Data Mining, RefactoringMiner, Bug-Fixing Commit, Developer Effort, Touched Lines of Code (TLOC), Github API, Software Maintenance, Commit Difference Analysis}
 
 \maketitle
 
@@ -42,7 +81,7 @@ The dataset provided in the coursework is used to identify and clone the relevan
 
     \item \textbf{Cloning the Repository:} The script creates a temporary directory and clones the specified GitHub repository into this location. The cloning process is performed using the \texttt{subprocess} library.
 
-    \item \textbf{Running RefactoringMiner:} After the repository is cloned, the script executes the RefactoringMiner tool to analyze the refactoring history of the project. It specifies the cloned repository and the desired output file in JSON format. 
+    \item \textbf{Running RefactoringMiner:} After the repository is cloned, the script executes the RefactoringMiner tool to analyze the refactoring history of the project. It specifies the cloned repository and the desired output file in JSON format.
 
     \item \textbf{Error Handling:} The script is designed to handle subprocess errors and unexpected exceptions gracefully. If any issues occur during the cloning of the repository or the execution of RefactoringMiner, they are logged with detailed error messages for troubleshooting.
 
