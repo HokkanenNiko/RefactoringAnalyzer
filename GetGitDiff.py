@@ -2,12 +2,34 @@ import json
 from pydriller import Repository
 from pathlib import Path
 
-def get_commit_diff(repo_path, output_file):
+def get_refactorings(refactoring_miner_output_file_path):
+    refactoring_commits = []
+    if(refactoring_miner_output_file_path == None):
+        return refactoring_commits
+    
+    with open(refactoring_miner_output_file_path, 'r') as json_file:
+        refactorings_data = json.load(json_file)
+        if refactorings_data == None:
+            return refactoring_commits
+    
+    # Iterate over the commits with refactorings
+    for commit in refactorings_data['commits']:
+        if commit['refactorings']:  # Only consider commits with refactorings
+            commit_hash = commit['sha1']
+            refactoring_commits.append(commit_hash)
+
+    return refactoring_commits
+
+
+def get_commit_diff(repo_path, output_file, refactoring_miner_output_file_path):
     # Container for the JSON output
     commit_diffs = []
 
+    refactoring_commit_hashes = get_refactorings(refactoring_miner_output_file_path)
+
     # Iterate through the commits in the repository
-    for commit in Repository(repo_path).traverse_commits():
+    for commit in Repository(repo_path, only_commits=refactoring_commit_hashes).traverse_commits():
+        
         # Check if the commit has a parent (meaning its not the first commit)
         if len(commit.parents) == 0:
             continue
