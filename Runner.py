@@ -6,6 +6,7 @@ import RefactoringRunner
 from DeveloperEffort import collect_refactoring_developer_effort
 from LoggerManager import get_logger
 from GetBugIssueData import main as issue_data
+from GetBugIssueDataJira import main as issue_data_jira
 from ProduceUniqueRepos import main as get_unique_repos
 from GetGitDiff import get_commit_diff
 
@@ -69,7 +70,11 @@ def main(user, token, single_repository):
                 collect_refactoring_developer_effort(cloned_repo_path, refminer_output_path, output_csv_path)                 # step e)
                 
                 refactoring_runner_logger.info("Proceeding to issue data analysis...")
-                issue_data(user, token, repository)                                                                           # step f)
+                issue_data(user, token, repository)
+                
+                project_key = repo_name.lower() 
+                refactoring_runner_logger.info("Proceeding to JIRA issue data analysis...")
+                issue_data_jira(token, project_key)                                                                           # step f)
 
                 remove_cloned_repository(cloned_repo_path, refactoring_runner_logger)
             else:
