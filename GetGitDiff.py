@@ -7,7 +7,7 @@ def get_refactorings(refactoring_miner_output_file_path):
     if(refactoring_miner_output_file_path == None):
         return refactoring_commits
     
-    with open(refactoring_miner_output_file_path, 'r') as json_file:
+    with open(refactoring_miner_output_file_path, encoding="utf-8") as json_file:
         refactorings_data = json.load(json_file)
         if refactorings_data == None:
             return refactoring_commits

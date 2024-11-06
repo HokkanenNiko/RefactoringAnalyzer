@@ -61,7 +61,7 @@ def collect_refactoring_developer_effort(repo_path, refminer_output_path, output
     Collect developer effort for refactorings and store the results in a CSV file.
     """
     
-    with open(refminer_output_path, 'r') as json_file:
+    with open(refminer_output_path, 'r', encoding="utf-8") as json_file:
         refactorings_data = json.load(json_file)
 
     
