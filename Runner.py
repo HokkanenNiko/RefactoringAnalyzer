@@ -3,12 +3,14 @@ import shutil
 import time
 import argparse
 import RefactoringRunner
+import sys
 from DeveloperEffort import collect_refactoring_developer_effort
 from LoggerManager import get_logger
 from GetBugIssueData import main as issue_data
 from GetBugIssueDataJira import main as issue_data_jira
 from ProduceUniqueRepos import main as get_unique_repos
 from GetGitDiff import get_commit_diff
+from RepositoryCloner import main as clone_repository
 
 def get_unique_repos_list():
     repositoriesInfoFilePath = get_unique_repos() # step a)
@@ -33,6 +35,14 @@ def run_refactoring_miner(repository, refactoring_runner_logger):
     refactoring_runner_logger.info("RefactoringRunner finished")
     return cloned_repo_path, refminer_output_path
 
+def check_executable_exists(executable, logger):
+    from shutil import which
+    if which(executable) is None:
+        logger.error(f"Error: {executable} is not available. Please install it and ensure it's in your PATH.")
+        sys.exit(1)
+    else:
+        logger.info(f"{executable} is available.")
+
 def main(user, token, single_repository):
     user = user
     token = token
@@ -41,6 +51,9 @@ def main(user, token, single_repository):
 
     # Loggers
     refactoring_runner_logger = get_logger("RefactoringRunner")
+
+    # Check if scc is available
+    check_executable_exists('scc', refactoring_runner_logger)
 
     repos_list = get_unique_repos_list()                                                                                      # step a)
 
