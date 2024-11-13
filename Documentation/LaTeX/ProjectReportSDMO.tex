@@ -72,7 +72,7 @@ These files work together to produce the necessary output in the form of JSON, C
 The methodology follows the project steps outlined in the coursework, including:
 
 \subsection{Refactoring Mining}
-The refactoring mining process utilizes the \texttt{RefactoringRunner.py} script to extract refactoring activities from software repositories on GitHub. This section outlines the methodology used to clone the repositories and analyze their refactoring history.
+The refactoring mining process utilizes the \texttt{RefactoringRunner.py} script to extract refactoring activities from software repositories on GitHub, more specifically, Apache Foundation projects. This section outlines the methodology used to clone the repositories and analyze their refactoring history.
 
 The dataset provided in the coursework is used to identify and clone the relevant GitHub repositories. Once cloned, the process is as follows:
 
@@ -83,7 +83,7 @@ The dataset provided in the coursework is used to identify and clone the relevan
 
     \item \textbf{Running RefactoringMiner:} After the repository is cloned, the script executes the RefactoringMiner tool to analyze the refactoring history of the project. It specifies the cloned repository and the desired output file in JSON format.
 
-    \item \textbf{Error Handling:} The script is designed to handle subprocess errors and unexpected exceptions gracefully. If any issues occur during the cloning of the repository or the execution of RefactoringMiner, they are logged with detailed error messages for troubleshooting.
+    \item \textbf{Error Handling:} The script is designed to handle subprocess errors and unexpected exceptions gracefully. If any issues occur during the cloning of the repository or the execution of RefactoringMiner, they are logged with the corresponding error messages.
 
     \item \textbf{Data Structure of the JSON Output:} Upon successful completion, RefactoringMiner generates a JSON file containing structured information about the refactoring activities identified within the repository. The JSON file includes the following key attributes:
         \begin{itemize}
@@ -137,7 +137,7 @@ This structured approach to calculating commit differences enhances our understa
 
 
 \subsection{Developer Effort}
-To assess the developer effort involved in each refactoring, we measured the TLOC (Touched Lines of Code) between a refactoring commit and its immediate predecessor. The \texttt{DeveloperEffort.py} script implements this process, utilizing the \texttt{scc} (Source Code Counter) tool to count the total lines of code affected by each refactoring. This approach provides a quantifiable measure of effort based on code modifications across refactoring commits.
+To assess the developer effort involved in each refactoring, we measured the TLOC (Touched Lines of Code) between a refactoring commit and its immediate predecessor. The \texttt{DeveloperEffort.py} script implements this process, utilizing the \texttt{scc} tool to count the total lines of code affected by each refactoring.
 
 \subsubsection{Methodology}
 \begin{enumerate}
@@ -149,7 +149,7 @@ To assess the developer effort involved in each refactoring, we measured the TLO
 \end{enumerate}
 
 
-\subsection{Bug-fixing Commits}
+\subsection{Bug-fixing Commits Github}
 For projects that utilize GitHub as an Issue Tracking System (ITS), the process of mining bug-fixing commits involves using the GitHub REST API to gather relevant issue data. This section outlines the methodology implemented in the \texttt{GetBugIssueData.py} script for collecting bug-related information.
 
 The script operates as follows:
@@ -166,6 +166,26 @@ The script operates as follows:
     \item \textbf{Output Management:} Upon completion, the script generates a JSON file containing all the retrieved issues. Additionally, it updates a results index file to log the outcome of the operation, including the total number of issues found and any errors encountered during the process.
 \end{enumerate}
 
+\subsection{Bug-fixing Commits Jira}
+For projects that utilize Jira as an Issue Tracking System (ITS), the process of mining bug-fixing commits involves using the JIRA REST API to gather relevant issue data. This section outlines the methodology implemented in the \texttt{GetBugIssueDataJira.py} script for collecting bug-related information.
+
+The script operates as follows:
+
+\begin{enumerate}
+    \item \textbf{Setup and Tools:} The analysis is performed using the \texttt{requests} library for making HTTP requests to the Jira API. The script requires an API token for authentication and fetches bug-related issues from a specified Jira project that corresponds to the provided repository.
+
+    \item \textbf{Fetching Project Information:} The script retrieves a list of available Jira projects using the \texttt{project} endpoint. It filters projects based on single-word keys to match the base name of the repository provided by the user.
+
+    \item \textbf{Handling Rate Limits:} The script ensures compliance with Jira's API usage guidelines by handling HTTP responses and errors gracefully. It terminates or retries requests as needed to avoid disruptions due to invalid responses.
+
+    \item \textbf{Collecting Issue Data:} Bug issues are fetched using the Jira \texttt{search} endpoint with a JQL query that filters for issues labeled as "Bug" within the specified project. The script uses pagination to collect all relevant issues, iterating until all pages are retrieved.
+
+    \item \textbf{Data Processing and Output:} The retrieved issues are stored into a JSON file, containing details such as issue type, state, and description.
+
+    \item \textbf{Repository Matching:} The script maps the repository URL to the base name of a corresponding Jira project, ensuring that issues are correctly associated with the intended project.
+\end{enumerate}
+
+
 \section{Results}
 The project produces several outputs, including:
 
@@ -173,7 +193,8 @@ The project produces several outputs, including:
   \item Refactoring data in JSON format, with attributes such as refactoring type, commit hash, and inter-refactoring period.
   \item Commit diffs for each refactoring commit, including numerical data on the differences and the modified code content.
   \item Developer effort data, with attributes such as refactoring hash, previous hash, and TLOC.
-  \item Bug-fixing commit data from GitHub's issue tracking system.
+  \item Bug-fixing commit data from GitHub's issue tracking system and Jira.
+  \item A log for every repository analyzed stating whether errors occurred or not.
 \end{itemize}
 
 These results are compiled into a structured dataset, which forms the basis for the analysis performed in this report.
@@ -189,19 +210,22 @@ This step involves cloning the required repositories from GitHub. The \texttt{Re
 The \texttt{RefactoringRunner.py} script also runs RefactoringMiner to analyze the refactoring activity across all commits in each repository. It invokes the CLI commands for RefactoringMiner and produces the necessary output in JSON format for further analysis.
 
 \subsection{Step (c) - Calculating Diff Changes}
-This step is still pending implementation.
+The \texttt{GetGitDiff.py} script calculates and collects the diff changes between the detected commit and the previous commit. It uses the \texttt{pydriller} tool to gather this information.
 
 \subsection{Step (d) - Collecting Developer Effort (TLOC)}
 The \texttt{DeveloperEffort.py} script handles the task of collecting the total touched lines of code (TLOC) for each refactoring. It uses the \texttt{scc} tool to gather LOC information from both the refactoring commit and the previous commit, and calculates the absolute difference.
 
 \subsection{Step (e) - Mining Bug-Fixing Commits}
-The \texttt{GetBugIssueData.py} script is responsible for collecting bug-fixing commits by interacting with GitHub's REST API. It queries GitHub's issue tracking system (ITS) to collect relevant issue data and stores the output for further analysis.
+The \texttt{GetBugIssueData.py} and \texttt{GetBugIssueDataJira.py} scripts are responsible for collecting bug-fixing commits by interacting with GitHub's REST API and Jira's API.
 
 \subsection{Step (f) - Data Collection Logic and Submission Format}
 The \texttt{Runner.py} script orchestrates the entire process, calling all relevant scripts and producing the required output files in JSON and CSV formats. This script is responsible for ensuring that each part of the process runs smoothly, from cloning repositories to generating refactoring data and developer effort statistics.
 
 \section{Conclusion}
-The \texttt{RefactoringAnalyzer} project mines and analyzes refactoring activities in software projects. By combining tools like RefactoringMiner and Python scripts, the project provides valuable insights into developer effort and bug-fixing activity, supporting the broader application of refactoring in practice.
+The \texttt{RefactoringAnalyzer} project mines and analyzes refactoring activities in software projects. By combining tools like RefactoringMiner and Python scripts, the project provides valuable insights into developer effort and bug-fixing activity, supporting the broader application of refactoring in practice. Logging functionalities were also implemented to know if there was an error when running the \texttt{Runner.py} script to know if a repository failed to be analyzed completely.
+The outputs were successfully produced the 11th of November, 2024. It is important to note that two repositories failed to run, those being: fineract and plc4x. https://github.com/apache/fineract , https://github.com/apache/plc4x.
+
+
 
 \newpage
 \appendix
